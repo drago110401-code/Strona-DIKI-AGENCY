@@ -56,7 +56,7 @@ header{position:fixed;top:14px;left:0;right:0;z-index:50}
 .nav .btn{min-height:46px;padding:0 22px;font-size:15px}
 
 /* hero */
-.hero{padding:178px 0 80px}
+.hero{padding:178px 0 80px;overflow:clip}
 .hgrid{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:center}
 .pill{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border:1px solid var(--line);border-radius:999px;background:rgba(246,223,154,.06);font-size:14px;color:var(--gold2)}
 .pill i{width:8px;height:8px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite}
@@ -197,6 +197,120 @@ footer{border-top:1px solid var(--line);padding:46px 0;color:var(--muted);font-s
   *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
   .rv{opacity:1;transform:none}
 }
+
+/* ===== v3: hero boom ===== */
+.hero h1{font-size:clamp(40px,5.6vw,78px);line-height:1.04}
+.big-n{display:block;font:800 clamp(54px,9.4vw,132px)/.95 'Playfair Display',serif;letter-spacing:-.035em;font-variant-numeric:lining-nums tabular-nums;margin-bottom:6px}
+.wy{display:block;font-weight:700;margin-bottom:10px}
+.chain{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:38px;font-size:14px;color:var(--muted)}
+.chain span{padding:7px 14px;border:1px solid var(--line);border-radius:99px;background:rgba(246,223,154,.05)}
+.chain span.on{color:#161106;background:linear-gradient(100deg,var(--gold2),var(--gold));border-color:transparent;font-weight:700}
+.chain i{font-style:normal;color:var(--gold)}
+.stage{position:relative;display:grid;place-items:center;min-height:620px}
+.stage::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:conic-gradient(from 0deg,rgba(217,168,74,.0),rgba(217,168,74,.45),rgba(124,164,255,.2),rgba(217,168,74,0));filter:blur(50px);animation:spin 14s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.phone{position:relative;width:292px;aspect-ratio:9/18.4;border-radius:44px;padding:11px;background:linear-gradient(160deg,#2a3a57,#0b1320);border:1px solid rgba(246,223,154,.3);box-shadow:0 50px 100px -30px rgba(0,0,0,.8),0 0 80px -20px rgba(217,168,74,.4);animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-12px) rotate(.6deg)}}
+.notch{position:absolute;top:18px;left:50%;width:78px;height:22px;border-radius:99px;background:#05080e;transform:translateX(-50%);z-index:5}
+.reel{position:relative;height:100%;border-radius:34px;overflow:hidden;background:#0b1320}
+.scene{position:absolute;inset:0;background:linear-gradient(170deg,#1d3a6b,#0b1320 60%)}
+.blob{position:absolute;border-radius:50%;filter:blur(30px)}
+.b1{width:200px;height:200px;background:var(--gold);opacity:.55;top:12%;left:-50px;animation:drift 7s ease-in-out infinite}
+.b2{width:170px;height:170px;background:#4f7be0;opacity:.5;bottom:8%;right:-40px;animation:drift 9s ease-in-out infinite reverse}
+@keyframes drift{50%{transform:translate(34px,-30px) scale(1.15)}}
+.seg{position:absolute;top:44px;left:16px;right:16px;display:flex;gap:5px;z-index:3}
+.seg s{flex:1;height:3px;border-radius:9px;background:rgba(255,255,255,.28);overflow:hidden;position:relative}
+.seg s::after{content:"";position:absolute;inset:0;background:#fff;transform:scaleX(0);transform-origin:left;animation:fill 12s linear infinite}
+.seg s:nth-child(2)::after{animation-delay:3s}.seg s:nth-child(3)::after{animation-delay:6s}.seg s:nth-child(4)::after{animation-delay:9s}
+@keyframes fill{0%{transform:scaleX(0)}25%,100%{transform:scaleX(1)}}
+.rtop{position:absolute;top:60px;left:16px;z-index:3;display:flex;align-items:center;gap:10px;font-size:13px}
+.rtop b{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--gold2),var(--goldd));color:#161106;font:800 11px Inter}
+.cap{position:absolute;left:18px;right:70px;bottom:34px;z-index:3}
+.cap small{display:inline-block;font:700 11px Inter;letter-spacing:.14em;color:#161106;background:var(--gold2);padding:4px 9px;border-radius:6px;margin-bottom:12px}
+.cap p{font:700 25px/1.12 'Playfair Display',serif;text-shadow:0 2px 20px rgba(0,0,0,.6)}
+.side{position:absolute;right:12px;bottom:40px;z-index:3;display:grid;gap:18px;text-align:center;font-size:11.5px}
+.side div{display:grid;gap:3px;justify-items:center}.side svg{width:28px;height:28px}
+.toast{position:absolute;display:flex;gap:12px;align-items:center;padding:12px 16px;border-radius:16px;background:rgba(15,26,45,.92);backdrop-filter:blur(12px);border:1px solid var(--line);box-shadow:0 20px 50px rgba(0,0,0,.5);opacity:0;animation:pop 9s infinite;z-index:6}
+.toast i{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--gold2),var(--goldd));flex:none}
+.toast b{display:block;font-size:14px;line-height:1.2}.toast span{font-size:12px;color:var(--muted)}
+.t1{left:-6%;top:14%}.t2{right:-4%;top:46%;animation-delay:3s}.t3{left:-2%;bottom:10%;animation-delay:6s}
+@keyframes pop{0%{opacity:0;transform:translateY(16px) scale(.94)}6%,26%{opacity:1;transform:none}32%,100%{opacity:0;transform:translateY(-10px)}}
+
+/* ===== anatomia ===== */
+.anat{border:1px solid var(--line);border-radius:30px;padding:20px;background:linear-gradient(180deg,rgba(246,223,154,.06),rgba(255,255,255,.015))}
+.tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px}
+.tabs button{cursor:pointer;text-align:left;padding:16px 18px;min-height:64px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.025);display:grid;transition:all .2s}
+.tabs button b{font:700 18px 'Playfair Display';color:var(--gold2);font-variant-numeric:lining-nums}.tabs button span{font-size:14px;color:var(--muted)}
+.tabs button:hover{border-color:rgba(246,223,154,.4)}
+.tabs button[aria-selected=true]{background:linear-gradient(100deg,rgba(246,223,154,.2),rgba(217,168,74,.08));border-color:var(--gold)}
+.anat-body{display:grid;grid-template-columns:.8fr 1.2fr;gap:36px;align-items:center;padding:14px}
+.anat-ph{position:relative;aspect-ratio:9/12;max-width:300px;width:100%;margin-inline:auto;border-radius:26px;padding:26px 22px;background:linear-gradient(170deg,#1d3a6b,#0b1320 70%);display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;border:1px solid var(--line)}
+.anat-ph .bar{position:absolute;top:18px;left:22px;right:22px;height:4px;border-radius:9px;background:rgba(255,255,255,.2)}
+.anat-ph .bar s{display:block;height:100%;width:12%;border-radius:9px;background:var(--gold2);transition:width .5s}
+.anat-ph small{align-self:flex-start;font:700 11px Inter;letter-spacing:.14em;color:#161106;background:var(--gold2);padding:4px 9px;border-radius:6px;margin-bottom:12px}
+.anat-ph p{font:700 25px/1.15 'Playfair Display'}
+.anat-ph em{position:absolute;top:34px;right:20px;font-size:11px;color:var(--muted)}
+.anat-tx h3{font-size:clamp(26px,3.4vw,38px);margin-bottom:16px}.anat-tx p{color:var(--muted);margin-bottom:20px;font-size:18px}
+.anat-tx ul{list-style:none;display:grid;gap:10px}.anat-tx li{display:flex;gap:12px;color:#d3d8e2}.anat-tx li::before{content:"✦";color:var(--gold)}
+
+/* ===== pipeline ===== */
+.pipe{list-style:none;position:relative;display:grid;gap:18px;max-width:900px;margin:0 auto}
+.pipe::before{content:"";position:absolute;left:35px;top:20px;bottom:20px;width:2px;background:linear-gradient(var(--gold),rgba(217,168,74,.05))}
+.pipe li{position:relative;display:grid;grid-template-columns:72px 1fr;gap:22px;align-items:start;padding:26px 28px 26px 0}
+.pipe li>b{position:relative;z-index:1;display:grid;place-items:center;width:72px;height:72px;border-radius:50%;background:var(--bg);border:2px solid var(--gold);font:700 22px 'Playfair Display';color:var(--gold2);font-variant-numeric:lining-nums}
+.pipe li>div{padding:24px 28px;border:1px solid var(--line);border-radius:22px;background:var(--card);transition:border-color .25s,transform .25s}
+.pipe li:hover>div{border-color:rgba(246,223,154,.45);transform:translateX(6px)}
+.pipe h3{font-size:24px;margin-bottom:8px}.pipe p{color:var(--muted);font-size:16px}
+.out{display:inline-block;margin-top:14px;padding:5px 13px;border-radius:99px;background:rgba(246,223,154,.1);color:var(--gold2);font-size:13px;font-weight:600}
+.goal{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px;margin:40px 0 26px;font:700 clamp(20px,3.2vw,38px) 'Playfair Display'}
+.goal i{font-style:normal;color:var(--gold)}
+
+/* ===== before/after ===== */
+.ba{max-width:620px;margin:0 auto}
+.ba-in{position:relative;border-radius:28px;overflow:hidden;border:1px solid var(--line);background:var(--card);--p:50%;user-select:none}
+.side-l,.side-r{padding:22px}
+.side-r{position:absolute;inset:0;background:var(--card);clip-path:inset(0 0 0 var(--p))}
+.side-l{background:#1b1f27}
+.ph-head{display:flex;gap:14px;align-items:center;margin-bottom:18px}.ph-head i{width:52px;height:52px;border-radius:50%;background:#394150}
+.side-r .ph-head i{background:linear-gradient(135deg,var(--gold2),var(--goldd))}
+.ph-head b{display:block}.ph-head span{font-size:13px;color:var(--muted)}
+.grid9{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.grid9 u{text-decoration:none;display:grid;place-items:center;text-align:center;aspect-ratio:1;padding:8px;border-radius:10px;font-size:12px;line-height:1.25}
+.dull u{background:#2a303b;color:#7c8594}.dull u:nth-child(3n+1){background:#333a47}.dull u:nth-child(4){background:#3a3128}
+.shiny u{background:linear-gradient(150deg,#1d3a6b,#0b1320);color:var(--text);font:700 14px/1.2 'Playfair Display',serif;border:1px solid var(--line)}
+.shiny u:nth-child(3n+2){background:linear-gradient(150deg,var(--gold2),var(--goldd));color:#161106;border:0}
+.knob{position:absolute;top:50%;left:var(--p);width:48px;height:48px;margin:-24px 0 0 -24px;border-radius:50%;background:var(--gold2);color:#161106;display:grid;place-items:center;pointer-events:none;box-shadow:0 8px 30px rgba(0,0,0,.5)}
+.knob svg{width:22px}.ba-in::after{content:"";position:absolute;top:0;bottom:0;left:var(--p);width:2px;background:var(--gold2);pointer-events:none}
+#bar{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.ba-note{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px;font-size:14px;color:var(--muted);text-align:center}
+.ba-note span:last-child{color:var(--gold2)}
+
+/* ===== quiz ===== */
+.quiz{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;padding:56px;border:1px solid rgba(246,223,154,.3);border-radius:34px;background:radial-gradient(800px circle at 0 0,rgba(29,58,107,.6),transparent 55%),var(--card);align-items:center}
+.quiz h2{font-size:clamp(30px,4vw,48px);margin-bottom:16px}.quiz .q-l>p{color:var(--muted);margin-bottom:26px}
+.ring{position:relative;width:150px;height:150px}.ring svg{width:100%}.ring #arc{transition:stroke-dashoffset 1s cubic-bezier(.2,.7,.2,1)}
+.ring b{position:absolute;inset:0;display:grid;place-items:center;font:800 42px 'Playfair Display';padding-bottom:14px}
+.ring small{position:absolute;left:0;right:0;bottom:36px;text-align:center;color:var(--muted);font-size:12px}
+.qs{border:0;display:grid;gap:12px}
+.qr{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px 16px 14px 20px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.025);font-size:16px}
+.qr .yn{display:flex;gap:8px;flex:none}
+.qr button{min-width:56px;min-height:44px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.04);cursor:pointer;font-weight:600;transition:all .2s}
+.qr button:hover{border-color:var(--gold2)}
+.qr button[aria-pressed=true]{background:linear-gradient(100deg,var(--gold2),var(--gold));color:#161106;border-color:transparent}
+.qr button.no[aria-pressed=true]{background:#2a3347;color:var(--text);border-color:var(--line)}
+.res{margin-top:22px;padding:26px;border-radius:20px;border:1px solid var(--gold);background:rgba(217,168,74,.1)}
+.res h3{font-size:24px;margin-bottom:10px}.res p{color:var(--muted);margin-bottom:18px}
+
+@media (max-width:1020px){
+  .stage{min-height:560px;margin-top:20px}.t1{left:0}.t2{right:0}.t3{left:0}
+  .anat-body,.quiz{grid-template-columns:1fr}.quiz{padding:30px 20px}
+}
+@media (max-width:640px){
+  .tabs{grid-template-columns:repeat(2,1fr)}.pipe::before{left:27px}.pipe li{grid-template-columns:56px 1fr;gap:14px;padding-right:0}.pipe li>b{width:56px;height:56px;font-size:18px}.pipe li>div{padding:20px}
+  .qr{flex-direction:column;align-items:flex-start}.ba-note{grid-template-columns:1fr}
+  .stage{min-height:520px}.phone{width:250px}.toast{transform-origin:left}.t2{top:50%}
+}
+@media (prefers-reduced-motion:reduce){.toast{opacity:1;animation:none}.t2,.t3{display:none}.seg s::after{transform:scaleX(1)}.stage::before{animation:none}}
 </style>
 </head>
 <body>
@@ -207,7 +321,7 @@ footer{border-top:1px solid var(--line);padding:46px 0;color:var(--muted);font-s
   <div class="nav">
    <a href="#top" class="logo" aria-label="DIKI Agency"><span>DIKI</span><i>.</i><span>AGENCY</span></a>
    <nav class="links" aria-label="Menu">
-    <a href="#o-nas">O nas</a><a href="#jak-dzialamy">Jak działamy</a><a href="#oferta">Oferta</a><a href="#faq">FAQ</a>
+    <a href="#anatomia">Ekspertyza</a><a href="#jak-dzialamy">Jak działamy</a><a href="#o-nas">O nas</a><a href="#oferta">Oferta</a><a href="#faq">FAQ</a>
    </nav>
    <a href="#kontakt" class="btn btn-p">Porozmawiajmy</a>
   </div>
@@ -218,35 +332,43 @@ footer{border-top:1px solid var(--line);padding:46px 0;color:var(--muted);font-s
 <section class="hero">
  <div class="wrap hgrid">
   <div>
-   <span class="pill rv"><i></i>Tylko Trójmiasto i Pomorze</span>
-   <h1 class="rv">Twoi klienci są online. <em class="gold">Czy Ty też?</em></h1>
-   <p class="lead rv">Jesteśmy <b>Diana i Kiril</b>. Prowadzimy social media, tworzymy angażujące Reelsy i zarządzamy skutecznymi reklamami dla lokalnych firm w Trójmieście. Pracujemy z kilkoma wybranymi partnerami naraz — bo liczy się <b>wynik i realna sprzedaż</b>, a nie ilość.</p>
+   <span class="pill rv"><i></i>Social media dla firm z Trójmiasta · 2 wolne miejsca</span>
+   <h1 class="rv"><span class="big-n gold" id="bign" data-to="650000000">650 000 000</span><span class="wy">wyświetleń.</span> Teraz robimy to <em class="gold">dla Twojej firmy.</em></h1>
+   <p class="lead rv">Tyle razy ludzie obejrzeli nasze własne profile w rok. Wiemy, <b>co zatrzymuje kciuk</b> — i przekładamy to na lokalne biznesy: strategia, sesja w Twoim lokalu, Reelsy, reklamy i prowadzenie. <b>Od pomysłu do klienta.</b></p>
    <div class="cta rv">
-    <a href="#kontakt" class="btn btn-p">Sprawdź, czy pasujemy</a>
-    <a href="https://wa.me/48886027795?text=Dzie%C5%84%20dobry%21%20Chc%C4%99%20um%C3%B3wi%C4%87%20bezp%C5%82atn%C4%85%20konsultacj%C4%99%20i%20dowiedzie%C4%87%20si%C4%99%20wi%C4%99cej%20o%20wsp%C3%B3%C5%82pracy." class="btn btn-g" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.600-4-4.700-4.200-.1-.2-1.100-1.500-1.100-2.800s.7-2 1-2.300c.2-.3.600-.3.800-.3h.600c.2 0 .4 0 .6.500l.8 2c.1.200.1.400 0 .6l-.4.600c-.1.200-.3.300-.1.600.2.300.8 1.300 1.700 2.100 1.200 1 2.100 1.300 2.400 1.500.3.100.5.100.7-.1l.9-1.100c.2-.3.4-.2.700-.1l1.900.9c.3.100.5.200.5.300.1.200.1.800-.1 1.500z"/></svg>Napisz na WhatsApp</a>
+    <a href="#test" class="btn btn-p">Sprawdź swój profil w 30 sekund</a>
+    <a href="https://wa.me/48886027795?text=Dzie%C5%84%20dobry%21%20Chc%C4%99%20um%C3%B3wi%C4%87%20bezp%C5%82atn%C4%85%20konsultacj%C4%99%20i%20dowiedzie%C4%87%20si%C4%99%20wi%C4%99cej%20o%20wsp%C3%B3%C5%82pracy." class="btn btn-g" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.8-.1 1.5z"/></svg>WhatsApp</a>
    </div>
-   <div class="proof rv">
-    <div><b data-count="650" data-suf="M+">650M+</b><span>wyświetleń własnych profili</span></div>
-    <div><b>7 dni</b><span>do pierwszych postów</span></div>
-    <div><b>−50%</b><span>na pierwszy miesiąc</span></div>
+   <div class="chain rv" aria-label="Nasza ścieżka">
+    <span>Strategia</span><i>→</i><span>Sesja</span><i>→</i><span>Reelsy</span><i>→</i><span>Reklamy</span><i>→</i><span class="on">Klienci</span>
    </div>
   </div>
 
-  <div class="founders rv">
-   <div class="ph" role="img" aria-label="Diana i Kiril — założyciele DIKI Agency">
-    <!-- Wstaw zdjęcie: <img src="diana-kiril.jpg" alt="Diana i Kiril"> -->
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><circle cx="16.500" cy="9" r="2.600"/><path d="M2.500 20c.4-3.600 3-5.800 6.500-5.800s6.100 2.200 6.500 5.800M15 14.600c3.200-.4 5.800 1.400 6.500 5"/></svg>
+  <div class="stage rv" aria-hidden="true">
+   <div class="phone">
+    <div class="notch"></div>
+    <div class="reel">
+     <div class="seg"><s></s><s></s><s></s><s></s></div>
+     <div class="rtop"><b>DIKI</b><span>@twoja.firma</span></div>
+     <div class="scene"><div class="blob b1"></div><div class="blob b2"></div></div>
+     <div class="cap"><small>HOOK · 0–3 s</small><p id="hookt">Dlaczego nikt nie zagląda do Twojego lokalu?</p></div>
+     <div class="side">
+      <div><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7-4.4-9.3-9A5.400 5.400 0 0 1 12 6.200 5.400 5.400 0 0 1 21.300 12C19 16.600 12 21 12 21z"/></svg><span id="likes">48,2 tys.</span></div>
+      <div><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v12H8l-4 4z"/></svg><span>1 204</span></div>
+      <div><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 12l18-8-6 17-3-7z"/></svg><span>3 891</span></div>
+     </div>
+    </div>
    </div>
-   <div class="fc fc2"><b>2</b><span>wolne miejsca<br>w tym miesiącu</span></div>
-   <div class="fc"><b>650M+</b><span>wyświetleń na własnych<br>platformach w rok</span></div>
-   <div class="fn"><b>Diana &amp; Kiril</b><span>Założyciele · Trójmiasto</span></div>
+   <div class="toast t1"><i></i><div><b>Nowe zapytanie</b><span>z Instagrama · przed chwilą</span></div></div>
+   <div class="toast t2"><i></i><div><b>Rezerwacja na sobotę</b><span>z Reelsa · 2 min temu</span></div></div>
+   <div class="toast t3"><i></i><div><b>+12 400 wyświetleń</b><span>dzisiaj · zasięg rośnie</span></div></div>
   </div>
  </div>
 </section>
 
 <div class="mq" aria-hidden="true"><div class="mq-t">
- <span>Social media</span><span>Reelsy</span><span>Meta Ads</span><span>TikTok</span><span>Sesje zdjęciowe</span><span>Google Ads</span><span>Raporty</span>
- <span>Social media</span><span>Reelsy</span><span>Meta Ads</span><span>TikTok</span><span>Sesje zdjęciowe</span><span>Google Ads</span><span>Raporty</span>
+ <span>Strategia</span><span>Sesja w Twoim lokalu</span><span>Reelsy</span><span>Hooki</span><span>Meta Ads</span><span>TikTok</span><span>Raporty</span>
+ <span>Strategia</span><span>Sesja w Twoim lokalu</span><span>Reelsy</span><span>Hooki</span><span>Meta Ads</span><span>TikTok</span><span>Raporty</span>
 </div></div>
 
 <section>
@@ -257,6 +379,90 @@ footer{border-top:1px solid var(--line);padding:46px 0;color:var(--muted);font-s
    <article class="card rv"><div class="num">02</div><h3>Klikanie „Promuj post” to przepalanie budżetu</h3><p>Podbijanie postów bez precyzyjnych lejków i analityki daje lajki, ale nie daje klientów. To ukryta strata, a nie oszczędność.</p></article>
    <article class="card rv"><div class="num">03</div><h3>Konkurencja przejmuje klientów, gdy Ty czekasz</h3><p>Gdy na Twoich profilach panuje cisza, konkurencja codziennie przypomina o sobie mieszkańcom Gdańska, Sopotu i Gdyni. Dla nowych klientów po prostu nie istniejesz.</p></article>
    <article class="card rv"><div class="num">04</div><h3>Klient sprawdza Instagram, zanim zadzwoni</h3><p>Nieaktualne treści, amatorskie zdjęcia czy brak aktywności budzą nieufność. Twój profil to współczesna witryna lokalu — decyduje o pierwszym wrażeniu.</p></article>
+  </div>
+ </div>
+</section>
+
+<section id="anatomia">
+ <div class="wrap">
+  <div class="sh rv"><span class="eyebrow">Ekspertyza w praktyce</span><h2>Anatomia Reela, <em class="gold">który sprzedaje</em></h2><p>Nie wrzucamy „ładnych filmików”. Każdy Reel ma budowę: 25 sekund, w których ktoś zatrzymuje się, ogląda i robi to, czego chcemy. Kliknij etap i zobacz, jak to robimy.</p></div>
+  <div class="anat rv">
+   <div class="tabs" role="tablist" aria-label="Etapy Reela">
+    <button role="tab" aria-selected="true" data-k="0"><b>0–3 s</b><span>Hook</span></button>
+    <button role="tab" aria-selected="false" data-k="1"><b>3–15 s</b><span>Historia</span></button>
+    <button role="tab" aria-selected="false" data-k="2"><b>15–22 s</b><span>Dowód</span></button>
+    <button role="tab" aria-selected="false" data-k="3"><b>22–25 s</b><span>Akcja</span></button>
+   </div>
+   <div class="anat-body">
+    <div class="anat-ph" aria-hidden="true">
+     <div class="bar"><s id="abar"></s></div>
+     <small id="alab">HOOK</small>
+     <p id="aex">Dlaczego nikt nie zagląda do Twojego lokalu?</p>
+     <em>przykład</em>
+    </div>
+    <div class="anat-tx" role="tabpanel" aria-live="polite">
+     <h3 id="ah">Zatrzymujemy kciuk</h3>
+     <p id="ap">Pierwsze 3 sekundy decydują o wszystkim. Zaczynamy od pytania, na które klient zna odpowiedź, albo od efektu, który chce zobaczyć. Zero „cześć, witamy w naszym lokalu”.</p>
+     <ul id="al"><li>Testujemy kilka hooków na jeden temat</li><li>Zostawiamy te, które mają największe utrzymanie widza</li></ul>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="jak-dzialamy">
+ <div class="wrap">
+  <div class="sh c rv"><span class="eyebrow">Maszyna do zasięgów</span><h2>Od pomysłu do klienta. <em class="gold">Wszystko robimy za Ciebie.</em></h2><p>Ty poświęcasz 15 minut w miesiącu na akceptację. Reszta to my.</p></div>
+  <ol class="pipe">
+   <li class="rv"><b>01</b><div><h3>Strategia i posłanie</h3><p>Ustalamy, kim jesteś w głowach klientów: jaki jest Twój unikalny głos, komu mówimy i co ma zrobić człowiek po obejrzeniu. Dostajesz plan treści na cały miesiąc.</p><span class="out">Efekt: jasny przekaz i plan</span></div></li>
+   <li class="rv"><b>02</b><div><h3>Sesja w Twoim lokalu</h3><p>Przyjeżdżamy z kamerą. Nagrywamy ludzi, miejsce i produkt tak, żeby wyglądały jak z dobrego serialu, a nie ze stockowej reklamy.</p><span class="out">Efekt: materiał na tygodnie</span></div></li>
+   <li class="rv"><b>03</b><div><h3>Generowanie treści</h3><p>Scenariusze, hooki, montaż, napisy, muzyka. Z jednej sesji robimy Reelsy, posty i relacje — każdy pod inny cel.</p><span class="out">Efekt: Reelsy, posty, relacje</span></div></li>
+   <li class="rv"><b>04</b><div><h3>Publikacja i reklamy</h3><p>Zakładamy konta, piksele i Business Manager. Publikujemy o właściwych porach i podkręcamy najlepsze treści płatnymi kampaniami do ludzi z Twojej okolicy.</p><span class="out">Efekt: duże, lokalne zasięgi</span></div></li>
+   <li class="rv"><b>05</b><div><h3>Raport i optymalizacja</h3><p>Co miesiąc pokazujemy liczby: zasięgi, zapytania, koszt klienta. Kopiujemy to, co działa, wyrzucamy to, co nie.</p><span class="out">Efekt: rosnąca sprzedaż</span></div></li>
+  </ol>
+  <div class="goal rv"><span>Zasięgi</span><i>→</i><span>Rozpoznawalność</span><i>→</i><span>Zapytania</span><i>→</i><span class="gold">Przychód</span></div>
+  <div class="zero rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 5.6 6 .8-4.4 4.2 1.1 6L12 16.7 6.7 19.6l1.1-6L3.400 9.400l6-.8z"/></svg><p><b>Zaczynasz od zera? Żaden problem.</b> Zakładamy i weryfikujemy profile, konfigurujemy Meta Business Manager, instalujemy Piksel i przygotowujemy spójną oprawę. Wszystkie dostępy i prawa własności zawsze pozostają w 100% Twoje.</p></div>
+ </div>
+</section>
+
+<section id="przed-po">
+ <div class="wrap">
+  <div class="sh c rv"><span class="eyebrow">Różnica</span><h2>Ten sam lokal. <em class="gold">Dwa różne profile.</em></h2><p>Przeciągnij suwak i zobacz, jak wygląda profil bez strategii i z nią.</p></div>
+  <div class="ba rv">
+   <div class="ba-in" id="ba">
+    <div class="side-l" aria-hidden="true">
+     <div class="ph-head"><i></i><div><b>twoja.firma</b><span>Bez strategii</span></div></div>
+     <div class="grid9 dull"><u>dzień dobry</u><u>promocja!!</u><u></u><u>zdjęcie z telefonu</u><u>udostępnienie</u><u>życzenia</u><u></u><u>godziny otwarcia</u><u>nowość</u></div>
+    </div>
+    <div class="side-r" aria-hidden="true">
+     <div class="ph-head"><i></i><div><b>twoja.firma</b><span>Z DIKI</span></div></div>
+     <div class="grid9 shiny"><u>Zobacz, jak to robimy</u><u>3 błędy, przez które tracisz gości</u><u>Za kulisami</u><u>Dlaczego warto?</u><u>Opinie klientów</u><u>Hit tygodnia</u><u>Ten smak zna całe Trójmiasto</u><u>Jak zarezerwować</u><u>Zespół</u></div>
+    </div>
+    <div class="knob" id="knob" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></div>
+    <input type="range" id="bar" min="0" max="100" value="50" aria-label="Porównaj profil bez strategii i z DIKI">
+   </div>
+   <p class="ba-note"><span>Przypadkowe posty, brak spójności, zero hooków</span><span>Spójna oprawa, hooki, jasny cel każdego posta</span></p>
+   <p class="note">Ilustracja poglądowa, nie profil realnego klienta.</p>
+  </div>
+ </div>
+</section>
+
+<section id="test">
+ <div class="wrap">
+  <div class="quiz rv">
+   <div class="q-l">
+    <span class="eyebrow">Test w 30 sekund</span>
+    <h2>Czy Twoje social media <em class="gold">pracują na klientów?</em></h2>
+    <p>Odpowiedz na 5 pytań. Dostaniesz wynik i konkretną radę — za darmo, bez zapisywania danych.</p>
+    <div class="ring" aria-live="polite"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="10"/><circle id="arc" cx="60" cy="60" r="52" fill="none" stroke="url(#gg)" stroke-width="10" stroke-linecap="round" stroke-dasharray="327" stroke-dashoffset="327" transform="rotate(-90 60 60)"/><defs><linearGradient id="gg"><stop offset="0" stop-color="#f6df9a"/><stop offset="1" stop-color="#b3882e"/></linearGradient></defs></svg><b id="score">0</b><small>/ 100</small></div>
+   </div>
+   <div class="q-r">
+    <fieldset class="qs" id="qs"></fieldset>
+    <div class="res" id="res" hidden>
+     <h3 id="rt"></h3><p id="rp"></p>
+     <a id="rwa" class="btn btn-p" target="_blank" rel="noopener">Omów wynik z Dianą i Kirilem</a>
+    </div>
+   </div>
   </div>
  </div>
 </section>
@@ -274,19 +480,6 @@ footer{border-top:1px solid var(--line);padding:46px 0;color:var(--muted);font-s
    <p>Współpracujemy tylko z kilkoma markami naraz. Sami prowadzimy platformy z ponad <b>650 milionami wyświetleń</b>. Wszystkie strategie, które wdrażamy u klientów, najpierw przetestowaliśmy na sobie.</p>
    <blockquote>„Nie bierzemy wszystkich klientów — po to, by dać z siebie maksimum tym, z którymi decydujemy się współpracować.”</blockquote>
   </div>
- </div>
-</section>
-
-<section id="jak-dzialamy">
- <div class="wrap">
-  <div class="sh c rv"><span class="eyebrow">Proces współpracy</span><h2>Od pierwszej rozmowy do wyników w <em class="gold">4 prostych krokach</em></h2><p>My robimy ciężką pracę — Ty poświęcasz 15 minut w miesiącu.</p></div>
-  <div class="steps">
-   <div class="step rv"><b>01</b><h3>Rozmowa bez presji</h3><p>Poznajemy Twój biznes i cele. Oceniamy szczerze, czy jesteśmy w stanie zagwarantować realne rezultaty. Jeśli nie — powiemy to wprost.</p></div>
-   <div class="step rv"><b>02</b><h3>Sesja zdjęciowa i setup</h3><p>Przyjeżdżamy na profesjonalną sesję w Twoim lokalu. Tworzymy i konfigurujemy konta, profile, piksele Meta oraz Business Suite.</p></div>
-   <div class="step rv"><b>03</b><h3>Kreacja treści i reklamy</h3><p>Montujemy dynamiczne Reelsy, piszemy angażujące posty i uruchamiamy kampanie. Ty tylko zatwierdzasz gotowy plan.</p></div>
-   <div class="step rv"><b>04</b><h3>Wyniki i raportowanie</h3><p>Na bieżąco optymalizujemy działania i dostarczamy czytelne raporty. Cel jest jeden: rosnąca liczba zapytań i klientów.</p></div>
-  </div>
-  <div class="zero rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.600 5.600 6 .8-4.400 4.200 1.100 6L12 16.700 6.700 19.600l1.100-6L3.400 9.400l6-.8z"/></svg><p><b>Zaczynasz od zupełnego zera? Żaden problem.</b> Zakładamy i weryfikujemy profile na wszystkich platformach, konfigurujemy Meta Business Manager, instalujemy Piksel Facebooka i przygotowujemy spójną oprawę graficzną. Wszystkie dostępy i prawa własności zawsze pozostają w 100% Twoje.</p></div>
  </div>
 </section>
 
@@ -362,20 +555,6 @@ footer{border-top:1px solid var(--line);padding:46px 0;color:var(--muted);font-s
  </div>
 </section>
 
-<section>
- <div class="wrap">
-  <div class="sh rv"><span class="eyebrow">Dlaczego DIKI Agency</span><h2>Nie jesteśmy kolejną agencją. <em class="gold">Jesteśmy Twoim lokalnym partnerem.</em></h2></div>
-  <div class="wg">
-   <article class="card rv"><small>Tylko Pomorze</small><h3>Znamy lokalny rynek</h3><p>Działamy na miejscu w Gdańsku, Gdyni i Sopocie. Wiemy, czym żyją mieszkańcy i jakie formaty przyciągają klientów z Twojej okolicy.</p></article>
-   <article class="card rv"><small>Jakość, nie ilość</small><h3>Mało klientów — celowo</h3><p>Każdy klient otrzymuje naszą pełną uwagę. Nie delegujemy Twojego konta przypadkowym stażystom.</p></article>
-   <article class="card rv"><small>Długofalowa relacja</small><h3>Partnerstwo w biznesie</h3><p>Zależy nam na trwałym wzroście Twoich przychodów. Twój sukces jest najlepszą wizytówką naszej agencji.</p></article>
-   <article class="card rv"><small>Praktyczne doświadczenie</small><h3>Sprawdzamy na sobie</h3><p>Zbudowaliśmy profile z ponad 650 milionami wyświetleń. Nie uczymy się marketingu na Twoim budżecie.</p></article>
-   <article class="card rv"><small>Oszczędność czasu</small><h3>Ty zatwierdzasz, my działamy</h3><p>Wystarczy 15 minut w miesiącu. My bierzemy na siebie kreację, opisy, publikowanie i analitykę.</p></article>
-   <article class="card rv"><small>Zero ryzyka</small><h3>Umowa na miesiąc</h3><p>Brak wielomiesięcznych zobowiązań. Startujesz z rabatem 50% i miesięcznym okresem wypowiedzenia.</p></article>
-  </div>
- </div>
-</section>
-
 <section id="faq">
  <div class="wrap">
   <div class="sh c rv"><span class="eyebrow">Częste pytania</span><h2>Odpowiedzi na to, <em class="gold">co najważniejsze</em></h2></div>
@@ -447,6 +626,66 @@ document.getElementById("lead").addEventListener("submit",e=>{
   const t="Dzień dobry Diana i Kiril! Zgłaszam się ze strony DIKI Agency: "+f.name.value+", pakiet: "+f.pkg.value+", tel: "+f.phone.value;
   window.open("https://wa.me/48886027795?text="+encodeURIComponent(t),"_blank","noopener");
 });
+
+// ===== hero big counter =====
+(function(){
+  const el=document.getElementById("bign");if(!el)return;
+  const to=+el.dataset.to,fmt=n=>n.toLocaleString("pl-PL").replace(/ /g," ");
+  if(matchMedia("(prefers-reduced-motion:reduce)").matches)return;
+  const t0=performance.now()+300,d=2600;
+  el.textContent="0";
+  (function f(t){const p=Math.max(0,Math.min((t-t0)/d,1));el.textContent=fmt(Math.round(to*(1-Math.pow(1-p,4))));if(p<1)requestAnimationFrame(f)})(performance.now());
+})();
+// hook text rotator in hero phone
+(function(){
+  const H=["Dlaczego nikt nie zagląda do Twojego lokalu?","3 błędy, przez które tracisz gości","Tego nie pokazujemy w menu","Zobacz, co dzieje się o 6:00 rano"];
+  const el=document.getElementById("hookt");if(!el)return;let i=0;
+  setInterval(()=>{i=(i+1)%H.length;el.style.opacity=0;setTimeout(()=>{el.textContent=H[i];el.style.opacity=1},300)},3000);
+  el.style.transition="opacity .3s";
+  const l=document.getElementById("likes");let n=48200;
+  setInterval(()=>{n+=Math.floor(Math.random()*40+5);l.textContent=(n/1000).toFixed(1).replace(".",",")+" tys."},1400);
+})();
+// anatomy tabs
+(function(){
+  const D=[
+   {l:"HOOK · 0–3 s",ex:"Dlaczego nikt nie zagląda do Twojego lokalu?",w:12,h:"Zatrzymujemy kciuk",p:"Pierwsze 3 sekundy decydują o wszystkim. Zaczynamy od pytania, na które klient zna odpowiedź, albo od efektu, który chce zobaczyć. Zero „cześć, witamy w naszym lokalu”.",li:["Testujemy kilka hooków na jeden temat","Zostawiamy te, które najdłużej trzymają widza"]},
+   {l:"HISTORIA · 3–15 s",ex:"Tak wygląda poranek, zanim otworzymy drzwi.",w:45,h:"Dajemy powód, żeby oglądać dalej",p:"Pokazujemy ludzi, proces i miejsce. Emocja i ciekawość zamiast sztywnej reklamy. Montaż w rytmie muzyki, napisy, szybkie cięcia.",li:["Ludzie z Twojego zespołu jako twarz marki","Ujęcia, które budują zaufanie do lokalu"]},
+   {l:"DOWÓD · 15–22 s",ex:"Gości, którzy wracają co tydzień — setki.",w:75,h:"Pokazujemy, że to działa",p:"Opinie, efekty, liczby, kulisy. Widz musi poczuć, że to miejsce jest warte jego czasu i pieniędzy.",li:["Prawdziwe opinie i reakcje klientów","Konkretne liczby zamiast ogólników"]},
+   {l:"AKCJA · 22–25 s",ex:"Zarezerwuj stolik. Link w profilu.",w:100,h:"Jedna prosta akcja",p:"Każdy Reel prowadzi do jednego kroku: zapisz, zadzwoń, zarezerwuj. Wzmacniamy go w opisie, w relacjach i w reklamie dla ludzi z okolicy.",li:["Jasne CTA, bez pytań „co teraz?”","Płatna promocja do osób z Trójmiasta"]}
+  ];
+  const tabs=document.querySelectorAll(".tabs button");
+  function show(k){const d=D[k];
+   tabs.forEach(b=>b.setAttribute("aria-selected",b.dataset.k==k));
+   alab.textContent=d.l;aex.textContent=d.ex;abar.style.width=d.w+"%";ah.textContent=d.h;ap.textContent=d.p;
+   al.innerHTML=d.li.map(x=>"<li>"+x+"</li>").join("");}
+  tabs.forEach(b=>b.addEventListener("click",()=>show(b.dataset.k)));
+})();
+// before/after slider
+(function(){
+  const bar=document.getElementById("bar"),ba=document.getElementById("ba");if(!bar)return;
+  bar.addEventListener("input",()=>ba.style.setProperty("--p",bar.value+"%"));
+})();
+// quiz
+(function(){
+  const Q=["Publikujesz regularnie (min. 3 razy w tygodniu)?","Masz Reelsy z ludźmi i wnętrzem Twojej firmy?","Prowadzisz reklamy z zainstalowanym Pikselem Meta?","Wiesz, ile zapytań miesięcznie przychodzi z social mediów?","Twój profil ma spójną oprawę i jasny opis: co i dla kogo?"];
+  const box=document.getElementById("qs");if(!box)return;
+  const A=Array(Q.length).fill(null);
+  box.innerHTML="<legend class='sr'>Test profilu</legend>"+Q.map((q,i)=>`<div class="qr" data-i="${i}"><span>${q}</span><div class="yn"><button type="button" class="yes" aria-pressed="false">Tak</button><button type="button" class="no" aria-pressed="false">Nie</button></div></div>`).join("");
+  const arc=document.getElementById("arc"),sc=document.getElementById("score"),res=document.getElementById("res");
+  box.addEventListener("click",e=>{
+    const b=e.target.closest("button");if(!b)return;
+    const r=b.closest(".qr"),i=+r.dataset.i;A[i]=b.classList.contains("yes");
+    r.querySelectorAll("button").forEach(x=>x.setAttribute("aria-pressed",x===b));
+    const s=A.filter(Boolean).length*20,done=A.every(a=>a!==null);
+    sc.textContent=s;arc.style.strokeDashoffset=327*(1-s/100);
+    if(!done)return;
+    const T=s<=40?["Tracisz klientów każdego dnia","Twój profil nie zamienia zasięgów w zapytania. Brakuje systemu: regularnych treści, hooków i reklam do lokalnej grupy. Dobra wiadomość: to da się naprawić w kilka tygodni."]:
+      s<=80?["Masz fundamenty. Brakuje systemu","Robisz część rzeczy dobrze, ale bez strategii i reklam zasięg jest przypadkowy. Spójny plan i regularny Reel zrobią tu największą różnicę."]:
+      ["Jesteś blisko. Czas skalować","Masz dobrą bazę. Teraz warto wejść w testowanie hooków, płatne kampanie i raportowanie, żeby przełożyć zasięgi na przychód."];
+    rt.textContent=T[0];rp.textContent=T[1];res.hidden=false;
+    rwa.href="https://wa.me/48886027795?text="+encodeURIComponent("Dzień dobry Diana i Kiril! Zrobiłem test profilu na stronie DIKI Agency. Wynik: "+s+"/100. Chciałbym omówić, co poprawić.");
+  });
+})();
 </script>
 </body>
 </html>
