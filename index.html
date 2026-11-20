@@ -3,228 +3,199 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DIKI AGENCY — Strony i marketing, które sprzedają</title>
-<meta name="description" content="DIKI AGENCY projektuje szybkie, nowoczesne strony internetowe i kampanie, które zamieniają odwiedzających w klientów.">
-<meta name="theme-color" content="#07080d">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23c6ff3d'/%3E%3Cpath d='M9 8h7a8 8 0 010 16H9z' fill='%2307080d'/%3E%3C/svg%3E">
+<title>DIKI Agency — Skuteczny marketing dla lokalnych firm | Trójmiasto i Pomorze</title>
+<meta name="description" content="Diana i Kiril – DIKI Agency. Prowadzimy social media, Reelsy i kampanie reklamowe dla lokalnych firm w Gdańsku, Gdyni i Sopocie. 50% rabatu na start.">
+<meta property="og:title" content="DIKI Agency — Marketing dla lokalnych firm Trójmiasta">
+<meta property="og:description" content="Social media, Reelsy i kampanie reklamowe dla firm z Trójmiasta i Pomorza. Sprawdź nas z rabatem 50% na pierwszy miesiąc.">
+<meta name="theme-color" content="#080f1a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23d9a84a'/%3E%3Cpath d='M9 8h7a8 8 0 010 16H9z' fill='%23080f1a'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#07080d; --bg2:#0d0f17; --card:#11141e; --line:rgba(255,255,255,.09);
-  --text:#f4f6fb; --muted:#a3abbd; --lime:#c6ff3d; --violet:#7c5cff; --cyan:#38d6ff;
-  --r:22px; --max:1180px;
+  --bg:#080f1a; --bg2:#0b1320; --card:#0f1a2d; --card2:#14223a; --line:rgba(246,223,154,.12);
+  --text:#f5f2ea; --muted:#a9b3c4; --gold:#d9a84a; --gold2:#f6df9a; --goldd:#b3882e; --wa:#25d366;
+  --r:24px; --max:1180px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:90px}
-body{background:var(--bg);color:var(--text);font:400 17px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-h1,h2,h3,.display{font-family:'Space Grotesk',Inter,sans-serif;line-height:1.08;letter-spacing:-.025em}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{background:var(--bg);color:var(--text);font:400 17px/1.7 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,.serif,.price,.num,.proof b,.cnt b,.big,.fc b{font-variant-numeric:lining-nums}
+h1,h2,h3,.serif{font-family:'Playfair Display',Georgia,serif;line-height:1.1;letter-spacing:-.015em;font-weight:700}
 a{color:inherit;text-decoration:none}
-button,input,textarea,select{font:inherit;color:inherit}
+button,input,select{font:inherit;color:inherit}
 .wrap{width:min(var(--max),100% - 32px);margin-inline:auto}
-section{padding:110px 0;position:relative}
-:focus-visible{outline:3px solid var(--lime);outline-offset:3px;border-radius:8px}
-.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+section{padding:112px 0;position:relative}
+:focus-visible{outline:3px solid var(--gold2);outline-offset:3px;border-radius:8px}
+.gold{background:linear-gradient(100deg,var(--gold2),var(--gold) 55%,var(--goldd));-webkit-background-clip:text;background-clip:text;color:transparent}
+em.gold{font-style:italic}
 
-/* ambient background */
 .glow{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden}
-.glow i{position:absolute;border-radius:50%;filter:blur(110px);opacity:.38}
-.glow i:nth-child(1){width:560px;height:560px;background:var(--violet);top:-160px;left:-120px}
-.glow i:nth-child(2){width:480px;height:480px;background:#1fa3c9;top:30%;right:-160px;opacity:.22}
-.glow i:nth-child(3){width:420px;height:420px;background:var(--lime);bottom:-200px;left:30%;opacity:.12}
+.glow i{position:absolute;border-radius:50%;filter:blur(120px)}
+.glow i:nth-child(1){width:620px;height:620px;background:#1d3a6b;top:-220px;left:-160px;opacity:.55}
+.glow i:nth-child(2){width:520px;height:520px;background:var(--goldd);top:38%;right:-220px;opacity:.16}
+.glow i:nth-child(3){width:520px;height:520px;background:#1d3a6b;bottom:-240px;left:20%;opacity:.4}
 
 /* buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;border-radius:999px;font-weight:600;cursor:pointer;border:1px solid transparent;transition:transform .2s,box-shadow .2s,background .2s,border-color .2s}
-.btn-p{background:var(--lime);color:#0b0d12;box-shadow:0 10px 40px -10px rgba(198,255,61,.55)}
-.btn-p:hover{transform:translateY(-2px);box-shadow:0 16px 48px -8px rgba(198,255,61,.7)}
-.btn-g{border-color:var(--line);background:rgba(255,255,255,.04)}
-.btn-g:hover{border-color:rgba(255,255,255,.28);background:rgba(255,255,255,.08)}
-.btn svg{width:18px;height:18px}
-.btn[disabled]{opacity:.6;cursor:wait}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 30px;border-radius:999px;font-weight:600;cursor:pointer;border:1px solid transparent;transition:transform .2s,box-shadow .2s,background .2s,border-color .2s}
+.btn-p{background:linear-gradient(100deg,var(--gold2),var(--gold));color:#161106;box-shadow:0 12px 40px -12px rgba(217,168,74,.7)}
+.btn-p:hover{transform:translateY(-2px);box-shadow:0 18px 48px -10px rgba(217,168,74,.85)}
+.btn-g{border-color:rgba(246,223,154,.25);background:rgba(255,255,255,.03)}
+.btn-g:hover{border-color:var(--gold2);background:rgba(246,223,154,.08)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn[disabled]{opacity:.65;cursor:wait}
 
 /* nav */
 header{position:fixed;top:14px;left:0;right:0;z-index:50}
-.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 12px 10px 22px;border:1px solid var(--line);border-radius:999px;background:rgba(13,15,23,.72);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
-.logo{display:flex;align-items:center;gap:10px;font:700 20px 'Space Grotesk';letter-spacing:-.02em}
-.logo b{display:grid;place-items:center;width:32px;height:32px;border-radius:9px;background:var(--lime);color:#07080d}
-.logo span{color:var(--muted);font-weight:500}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 12px 10px 24px;border:1px solid var(--line);border-radius:999px;background:rgba(8,15,26,.74);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.logo{font:800 22px 'Playfair Display',serif;letter-spacing:.02em;display:flex;align-items:baseline;gap:2px}
+.logo i{color:var(--gold);font-style:normal}.logo small{font:600 11px Inter;letter-spacing:.3em;color:var(--muted);margin-left:8px}
 .links{display:flex;gap:30px;font-size:15px;color:var(--muted)}
-.links a{transition:color .2s;padding:8px 0}.links a:hover{color:var(--text)}
-.nav-r{display:flex;align-items:center;gap:10px}
-.lang{display:flex;border:1px solid var(--line);border-radius:999px;padding:3px}
-.lang button{background:none;border:0;border-radius:999px;min-width:44px;min-height:36px;font-size:13px;font-weight:600;color:var(--muted);cursor:pointer}
-.lang button[aria-pressed=true]{background:var(--text);color:#0b0d12}
-.nav .btn{min-height:44px;padding:0 20px;font-size:15px}
+.links a{transition:color .2s;padding:8px 0}.links a:hover{color:var(--gold2)}
+.nav .btn{min-height:46px;padding:0 22px;font-size:15px}
 
 /* hero */
-.hero{padding:190px 0 90px;text-align:center}
-.pill{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.04);font-size:14px;color:var(--muted)}
-.pill i{width:8px;height:8px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 0 rgba(198,255,61,.6);animation:pulse 2s infinite}
-@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(198,255,61,0)}100%{box-shadow:0 0 0 0 rgba(198,255,61,0)}}
-.hero h1{font-size:clamp(42px,7.4vw,96px);margin:26px auto 26px;max-width:15ch;font-weight:700}
-.grad{background:linear-gradient(95deg,var(--lime),var(--cyan) 55%,var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p.lead{max-width:640px;margin:0 auto 38px;color:var(--muted);font-size:clamp(17px,2vw,20px)}
-.cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.trust{display:flex;justify-content:center;align-items:center;gap:14px;margin-top:34px;color:var(--muted);font-size:14px}
-.avs{display:flex}.avs i{width:34px;height:34px;border-radius:50%;border:2px solid var(--bg);margin-left:-9px;background:linear-gradient(135deg,var(--violet),var(--cyan))}
-.avs i:nth-child(2){background:linear-gradient(135deg,var(--lime),#2bd68a)}.avs i:nth-child(3){background:linear-gradient(135deg,#ff7ac6,var(--violet))}.avs i:first-child{margin-left:0}
-.stars{color:var(--lime);letter-spacing:2px}
+.hero{padding:178px 0 80px}
+.hgrid{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border:1px solid var(--line);border-radius:999px;background:rgba(246,223,154,.06);font-size:14px;color:var(--gold2)}
+.pill i{width:8px;height:8px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(217,168,74,.7)}70%,100%{box-shadow:0 0 0 11px rgba(217,168,74,0)}}
+.hero h1{font-size:clamp(46px,7vw,92px);margin:26px 0 24px;font-weight:800}
+.lead{color:var(--muted);font-size:clamp(17px,2vw,20px);max-width:560px;margin-bottom:36px}
+.lead b{color:var(--text);font-weight:600}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.proof{display:flex;gap:30px;margin-top:40px;flex-wrap:wrap}
+.proof div{display:flex;flex-direction:column}
+.proof b{font:700 30px 'Playfair Display';color:var(--gold2);line-height:1}
+.proof span{font-size:13.5px;color:var(--muted);margin-top:6px}
 
-/* hero mockup */
-.mock{margin:70px auto 0;max-width:980px;border:1px solid var(--line);border-radius:26px;background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.02));padding:12px;box-shadow:0 60px 120px -40px rgba(124,92,255,.5)}
-.mock-in{border-radius:16px;background:var(--bg2);overflow:hidden}
-.bar{display:flex;gap:7px;padding:14px 16px;border-bottom:1px solid var(--line)}
-.bar i{width:11px;height:11px;border-radius:50%;background:#2a2f3d}
-.mock-body{display:grid;grid-template-columns:1.2fr 1fr;gap:18px;padding:22px;text-align:left}
-.chart{border:1px solid var(--line);border-radius:16px;padding:20px;background:rgba(255,255,255,.02)}
-.chart small{color:var(--muted);font-size:13px}
-.chart strong{display:block;font:700 40px 'Space Grotesk';margin:4px 0 16px}
-.chart strong em{font-style:normal;color:var(--lime);font-size:16px;margin-left:8px}
-.chart svg{width:100%;height:120px;display:block}
-.kp{display:grid;gap:14px}
-.kp>div{border:1px solid var(--line);border-radius:16px;padding:16px 18px;background:rgba(255,255,255,.02)}
-.kp small{color:var(--muted);font-size:13px}
-.kp b{display:block;font:700 26px 'Space Grotesk'}
-.kp .bg{height:6px;border-radius:9px;background:rgba(255,255,255,.08);margin-top:10px;overflow:hidden}
-.kp .bg s{display:block;height:100%;border-radius:9px;background:linear-gradient(90deg,var(--lime),var(--cyan))}
+.founders{position:relative;border:1px solid var(--line);border-radius:32px;padding:14px;background:linear-gradient(160deg,rgba(246,223,154,.1),rgba(255,255,255,.02));box-shadow:0 50px 100px -40px rgba(217,168,74,.35)}
+.ph{aspect-ratio:4/5;border-radius:22px;background:radial-gradient(circle at 30% 20%,#27456f,#0b1320 70%);display:grid;place-items:center;position:relative;overflow:hidden}
+.ph svg{width:46%;opacity:.5;color:var(--gold2)}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.fc{position:absolute;left:-26px;bottom:96px;background:rgba(15,26,45,.92);backdrop-filter:blur(14px);border:1px solid var(--line);border-radius:18px;padding:16px 20px;display:flex;gap:14px;align-items:center;box-shadow:0 20px 50px rgba(0,0,0,.5)}
+.fc b{font:700 26px 'Playfair Display';color:var(--gold2);line-height:1}
+.fc span{font-size:13px;color:var(--muted);line-height:1.35}
+.fc2{left:auto;right:-14px;top:34px;bottom:auto}
+.fn{text-align:center;padding:16px 8px 6px}.fn b{display:block;font:700 20px 'Playfair Display'}.fn span{font-size:14px;color:var(--muted)}
 
 /* marquee */
-.mq{padding:34px 0;border-block:1px solid var(--line);overflow:hidden;background:rgba(255,255,255,.015)}
-.mq-t{display:flex;gap:64px;width:max-content;animation:mq 34s linear infinite;font:600 22px 'Space Grotesk';color:#5d6579;white-space:nowrap}
-.mq-t span{display:flex;align-items:center;gap:64px}.mq-t span::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--violet)}
+.mq{padding:30px 0;border-block:1px solid var(--line);overflow:hidden;background:rgba(246,223,154,.03)}
+.mq-t{display:flex;gap:56px;width:max-content;animation:mq 38s linear infinite;font:italic 600 26px 'Playfair Display';color:#6d7a90;white-space:nowrap}
+.mq-t span{display:flex;align-items:center;gap:56px}.mq-t span::after{content:"✦";color:var(--gold);font-style:normal;font-size:16px}
 @keyframes mq{to{transform:translateX(-50%)}}
 
-/* heads */
-.eyebrow{display:inline-block;color:var(--lime);font:600 14px 'Space Grotesk';letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px}
-.sh{max-width:720px;margin-bottom:56px}
+.eyebrow{display:inline-block;color:var(--gold);font:600 13.5px Inter;letter-spacing:.2em;text-transform:uppercase;margin-bottom:18px}
+.sh{max-width:760px;margin-bottom:58px}.sh.c{text-align:center;margin-inline:auto}
 .sh h2{font-size:clamp(34px,5vw,58px)}
 .sh p{color:var(--muted);margin-top:18px;font-size:18px}
-.sh.c{text-align:center;margin-inline:auto}
 
-/* stats */
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
-.stats div{background:var(--bg2);padding:36px 28px}
-.stats b{display:block;font:700 clamp(38px,5vw,60px) 'Space Grotesk';letter-spacing:-.03em}
-.stats span{color:var(--muted);font-size:15px}
-
-/* bento */
-.bento{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
-.card{position:relative;border:1px solid var(--line);border-radius:var(--r);padding:32px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.015));overflow:hidden;transition:border-color .25s,transform .25s;cursor:default}
-.card:hover{border-color:rgba(198,255,61,.4);transform:translateY(-4px)}
-.card::before{content:"";position:absolute;inset:0;background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),rgba(124,92,255,.16),transparent 60%);opacity:0;transition:opacity .3s;pointer-events:none}
+/* problem */
+.pg{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.card{position:relative;border:1px solid var(--line);border-radius:var(--r);padding:34px;background:linear-gradient(180deg,rgba(246,223,154,.05),rgba(255,255,255,.012));overflow:hidden;transition:border-color .25s,transform .25s}
+.card:hover{border-color:rgba(246,223,154,.4);transform:translateY(-4px)}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%),rgba(217,168,74,.14),transparent 60%);opacity:0;transition:opacity .3s;pointer-events:none}
 .card:hover::before{opacity:1}
-.ic{display:grid;place-items:center;width:52px;height:52px;border-radius:15px;background:rgba(198,255,61,.1);color:var(--lime);margin-bottom:24px}
-.ic svg{width:26px;height:26px}
-.card h3{font-size:25px;margin-bottom:12px}
+.num{font:italic 700 44px 'Playfair Display';color:var(--gold);opacity:.9;line-height:1;margin-bottom:18px}
+.card h3{font-size:24px;margin-bottom:12px}
 .card p{color:var(--muted);font-size:16px}
-.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
-.tags span{padding:5px 12px;border:1px solid var(--line);border-radius:99px;font-size:13px;color:var(--muted)}
-.b-a{grid-column:span 4}.b-b{grid-column:span 2}.b-c{grid-column:span 2}.b-d{grid-column:span 2}.b-e{grid-column:span 2}
+
+/* about */
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.about .txt p{color:var(--muted);margin-bottom:18px}
+.about .txt p b{color:var(--text);font-weight:600}
+blockquote{margin-top:30px;padding:26px 28px;border-left:3px solid var(--gold);background:rgba(246,223,154,.05);border-radius:0 18px 18px 0;font:italic 500 22px/1.45 'Playfair Display'}
 
 /* process */
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;counter-reset:s}
-.step{padding:30px;border-top:2px solid var(--line);position:relative}
-.step::before{counter-increment:s;content:"0" counter(s);font:700 15px 'Space Grotesk';color:var(--lime)}
-.step h3{font-size:22px;margin:14px 0 10px}.step p{color:var(--muted);font-size:16px}
-.step::after{content:"";position:absolute;top:-2px;left:0;height:2px;width:0;background:var(--lime);transition:width 1.1s .1s}
-.step.in::after{width:100%}
-
-/* cases */
-.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.case{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:var(--card);transition:transform .25s,border-color .25s}
-.case:hover{transform:translateY(-6px);border-color:rgba(255,255,255,.22)}
-.thumb{height:210px;position:relative;display:grid;place-items:center;overflow:hidden}
-.thumb svg{width:70%;height:auto;opacity:.95}
-.t1{background:linear-gradient(135deg,#2a1f6b,#7c5cff)}.t2{background:linear-gradient(135deg,#0c4a5e,#38d6ff)}.t3{background:linear-gradient(135deg,#3b5a0a,#c6ff3d)}
-.case-b{padding:26px}
-.case small{color:var(--muted);font-size:13px;letter-spacing:.06em;text-transform:uppercase}
-.case h3{font-size:22px;margin:8px 0 16px}
-.res{display:flex;gap:26px}
-.res b{display:block;font:700 28px 'Space Grotesk';color:var(--lime)}
-.res span{font-size:13px;color:var(--muted)}
-.note{margin-top:20px;font-size:13px;color:#6f778a;text-align:center}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.step{padding:30px 26px;border:1px solid var(--line);border-radius:var(--r);background:var(--card)}
+.step b{font:italic 700 15px 'Playfair Display';color:var(--gold)}
+.step h3{font-size:22px;margin:14px 0 10px}.step p{color:var(--muted);font-size:15.5px}
+.zero{margin-top:22px;display:flex;gap:16px;align-items:flex-start;padding:24px 28px;border:1px dashed rgba(246,223,154,.3);border-radius:var(--r);background:rgba(246,223,154,.04);color:var(--muted)}
+.zero b{color:var(--gold2)}.zero svg{flex:none;width:26px;height:26px;color:var(--gold);margin-top:3px}
 
 /* pricing */
+.promo{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;padding:30px 36px;border-radius:var(--r);border:1px solid rgba(246,223,154,.4);background:linear-gradient(100deg,rgba(217,168,74,.2),rgba(217,168,74,.05));margin-bottom:34px}
+.promo>div{display:flex;align-items:center;gap:22px}
+.promo .big{font:800 56px 'Playfair Display';line-height:1}
+.promo p{color:var(--muted);max-width:520px;font-size:16px}.promo h3{font-size:22px;margin-bottom:4px;color:var(--text)}
 .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
-.plan{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:var(--r);padding:36px 32px;background:var(--card)}
-.plan.hot{border-color:var(--lime);background:linear-gradient(180deg,rgba(198,255,61,.09),var(--card) 55%);position:relative;transform:translateY(-10px)}
-.badge{position:absolute;top:-14px;left:32px;background:var(--lime);color:#0b0d12;font:700 12px 'Space Grotesk';letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:99px}
-.plan h3{font-size:24px}.plan .pr{font:700 44px 'Space Grotesk';margin:18px 0 4px;letter-spacing:-.03em}
-.plan .pr small{font-size:16px;color:var(--muted);font-weight:500}
-.plan>p{color:var(--muted);font-size:15px}
-.plan ul{list-style:none;margin:26px 0 32px;display:grid;gap:13px;flex:1}
-.plan li{display:flex;gap:12px;font-size:15.5px}
-.plan li svg{flex:none;width:20px;height:20px;color:var(--lime);margin-top:3px}
+.plan{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:var(--r);padding:36px 30px;background:var(--card);position:relative}
+.plan.hot{border-color:var(--gold);background:linear-gradient(180deg,rgba(217,168,74,.14),var(--card) 50%);transform:translateY(-12px);box-shadow:0 40px 80px -40px rgba(217,168,74,.55)}
+.badge{position:absolute;top:-15px;left:30px;background:linear-gradient(100deg,var(--gold2),var(--gold));color:#161106;font:700 12px Inter;letter-spacing:.1em;text-transform:uppercase;padding:7px 15px;border-radius:99px}
+.plan h3{font-size:28px}.chips{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 20px}
+.chips span{font-size:12.5px;padding:4px 11px;border-radius:99px;border:1px solid var(--line);color:var(--muted)}
+.price{font:800 50px 'Playfair Display';color:var(--gold2);line-height:1}
+.price small{font:500 15px Inter;color:var(--muted)}
+.old{margin-top:8px;color:var(--muted);font-size:14.5px}.old s{color:#7f8ba0}
+.cnt{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:22px 0}
+.cnt div{text-align:center;padding:12px 4px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.02)}
+.cnt b{display:block;font:700 24px 'Playfair Display';color:var(--text);line-height:1.1}.cnt span{font-size:12px;color:var(--muted)}
+.plan ul{list-style:none;display:grid;gap:12px;margin:6px 0 30px;flex:1}
+.plan li{display:flex;gap:11px;font-size:15px;color:#d3d8e2}
+.plan li svg{flex:none;width:19px;height:19px;color:var(--gold);margin-top:4px}
 .plan .btn{width:100%}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
+.pn div{display:flex;gap:14px;padding:20px 24px;border:1px solid var(--line);border-radius:18px;color:var(--muted);font-size:15px}
+.pn b{color:var(--text)}.pn svg{flex:none;width:24px;height:24px;color:var(--gold);margin-top:2px}
 
-/* testimonials */
-.tg{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.t{border:1px solid var(--line);border-radius:var(--r);padding:30px;background:rgba(255,255,255,.025)}
-.t p{font-size:17px;margin:14px 0 24px}
-.who{display:flex;align-items:center;gap:14px}
-.who i{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--violet),var(--cyan))}
-.who b{display:block;font-size:16px}.who span{font-size:14px;color:var(--muted)}
+/* why */
+.wg{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.wg .card{padding:30px}.wg small{display:inline-block;font:600 12px Inter;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px}
+.wg h3{font-size:22px}
 
 /* faq */
-.faq{max-width:820px;margin:0 auto;display:grid;gap:12px}
+.faq{max-width:840px;margin:0 auto;display:grid;gap:12px}
 details{border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.025);transition:border-color .2s}
-details[open]{border-color:rgba(198,255,61,.35)}
-summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 26px;min-height:64px;font:600 19px 'Space Grotesk'}
+details[open]{border-color:rgba(246,223,154,.45)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 26px;min-height:66px;font:600 19px 'Playfair Display',serif}
 summary::-webkit-details-marker{display:none}
-summary svg{flex:none;width:22px;height:22px;transition:transform .25s;color:var(--lime)}
+summary svg{flex:none;width:22px;height:22px;transition:transform .25s;color:var(--gold)}
 details[open] summary svg{transform:rotate(45deg)}
-details p{padding:0 26px 24px;color:var(--muted)}
+details p{padding:0 26px 24px;color:var(--muted);font-size:16px}
 
 /* contact */
-.final{border:1px solid var(--line);border-radius:34px;padding:64px;background:radial-gradient(900px circle at 0 0,rgba(124,92,255,.35),transparent 55%),radial-gradient(700px circle at 100% 100%,rgba(198,255,61,.14),transparent 55%),var(--card);display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+.final{border:1px solid rgba(246,223,154,.3);border-radius:36px;padding:64px;background:radial-gradient(900px circle at 0 0,rgba(29,58,107,.7),transparent 55%),radial-gradient(700px circle at 100% 100%,rgba(217,168,74,.2),transparent 55%),var(--card);display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
 .final h2{font-size:clamp(34px,4.6vw,56px)}
-.final .lp{color:var(--muted);margin:18px 0 28px;font-size:18px}
-.perks{list-style:none;display:grid;gap:12px}
-.perks li{display:flex;gap:12px;align-items:center}
-.perks svg{width:22px;height:22px;color:var(--lime);flex:none}
-form{display:grid;gap:16px;padding:30px;border:1px solid var(--line);border-radius:24px;background:rgba(7,8,13,.6);backdrop-filter:blur(10px)}
+.final .lp{color:var(--muted);margin:18px 0 26px;font-size:18px}
+.left{display:inline-flex;align-items:center;gap:10px;color:var(--gold2);font-weight:600;margin-bottom:22px;font-size:15px}
+.left i{width:9px;height:9px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite}
+form{display:grid;gap:16px;padding:30px;border:1px solid var(--line);border-radius:26px;background:rgba(8,15,26,.7);backdrop-filter:blur(10px)}
 label{display:grid;gap:8px;font-size:14px;color:var(--muted);font-weight:500}
-input,textarea,select{width:100%;min-height:52px;padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.04);transition:border-color .2s}
-select option{background:#11141e}
-textarea{min-height:110px;resize:vertical}
-input:focus,textarea:focus,select:focus{outline:none;border-color:var(--lime)}
-input:user-invalid,textarea:user-invalid{border-color:#ff6b7a}
-.fine{font-size:13px;color:#7a8296;text-align:center}
-.ok{display:none;padding:14px 16px;border-radius:14px;background:rgba(198,255,61,.12);color:var(--lime);font-weight:500}
-.ok.show{display:block}
+input,select{width:100%;min-height:54px;padding:14px 16px;border-radius:14px;border:1px solid rgba(246,223,154,.16);background:rgba(255,255,255,.04);transition:border-color .2s}
+select option{background:#0f1a2d}
+input:focus,select:focus{outline:none;border-color:var(--gold)}
+input:user-invalid{border-color:#ff7a86}
+.fine{font-size:13px;color:#7d889c;text-align:center}
+.alt{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;font-size:14px;color:var(--muted)}.alt a{color:var(--gold2);text-decoration:underline;text-underline-offset:3px}
 
 footer{border-top:1px solid var(--line);padding:46px 0;color:var(--muted);font-size:15px}
 .fw{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
-.fw nav{display:flex;gap:26px;flex-wrap:wrap}.fw a:hover{color:var(--text)}
+.fw nav{display:flex;gap:26px;flex-wrap:wrap}.fw a:hover{color:var(--gold2)}
 
-/* sticky mobile CTA */
 .mcta{display:none}
-
-/* reveal */
 .rv{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
 .rv.in{opacity:1;transform:none}
 
-@media (max-width:980px){
-  .links{display:none}
-  .bento .card,.b-a,.b-b,.b-c,.b-d,.b-e{grid-column:span 6}
-  .steps,.stats{grid-template-columns:repeat(2,1fr)}
-  .cases,.plans,.tg{grid-template-columns:1fr}
-  .plan.hot{transform:none}
-  .final{grid-template-columns:1fr;padding:34px 22px}
-  .mock-body{grid-template-columns:1fr}
+@media (max-width:1020px){
+  .links{display:none}.hgrid,.about,.final{grid-template-columns:1fr}
+  .founders{max-width:440px;margin:0 auto}.fc{left:-6px}.fc2{right:-6px}
+  .steps{grid-template-columns:repeat(2,1fr)}.plans,.wg{grid-template-columns:1fr}.plan.hot{transform:none}
+  .final{padding:36px 22px}
 }
-@media (max-width:620px){
-  section{padding:76px 0}.hero{padding:140px 0 60px}
-  .steps,.stats{grid-template-columns:1fr}
-  .nav .btn{display:none}.nav{padding-left:16px}
+@media (max-width:640px){
+  section{padding:76px 0}.hero{padding:132px 0 56px}
+  .pg,.steps,.pn{grid-template-columns:1fr}
+  .nav{padding-left:18px}.nav .btn{padding:0 16px;font-size:14px}.logo small{display:none}
+  .promo{padding:24px}.promo>div{flex-direction:column;align-items:flex-start;gap:10px}.promo .btn{width:100%}
   .mcta{display:block;position:fixed;left:12px;right:12px;bottom:12px;z-index:60}
-  .mcta .btn{width:100%;box-shadow:0 14px 40px rgba(0,0,0,.6)}
+  .mcta .btn{width:100%;box-shadow:0 14px 40px rgba(0,0,0,.65)}
   footer{padding-bottom:100px}
 }
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
-  .rv{opacity:1;transform:none}.step::after{width:100%}
+  .rv{opacity:1;transform:none}
 }
 </style>
 </head>
@@ -234,164 +205,213 @@ footer{border-top:1px solid var(--line);padding:46px 0;color:var(--muted);font-s
 <header>
  <div class="wrap">
   <div class="nav">
-   <a href="#top" class="logo" aria-label="DIKI AGENCY"><b>D</b>DIKI<span>AGENCY</span></a>
+   <a href="#top" class="logo" aria-label="DIKI Agency"><span>DIKI</span><i>.</i><span>AGENCY</span></a>
    <nav class="links" aria-label="Menu">
-    <a href="#uslugi" data-i="n1">Usługi</a><a href="#proces" data-i="n2">Proces</a><a href="#realizacje" data-i="n3">Realizacje</a><a href="#cennik" data-i="n4">Cennik</a><a href="#faq" data-i="n5">FAQ</a>
+    <a href="#o-nas">O nas</a><a href="#jak-dzialamy">Jak działamy</a><a href="#oferta">Oferta</a><a href="#faq">FAQ</a>
    </nav>
-   <div class="nav-r">
-    <div class="lang" role="group" aria-label="Language"><button data-l="pl" aria-pressed="true">PL</button><button data-l="ru" aria-pressed="false">RU</button></div>
-    <a href="#kontakt" class="btn btn-p" data-i="cta1">Bezpłatna wycena</a>
-   </div>
+   <a href="#kontakt" class="btn btn-p">Porozmawiajmy</a>
   </div>
  </div>
 </header>
 
 <main id="top">
 <section class="hero">
- <div class="wrap">
-  <span class="pill rv"><i></i><span data-i="pill">Przyjmujemy 3 nowe projekty w tym miesiącu</span></span>
-  <h1 class="rv"><span data-i="h1a">Strony, które</span> <span class="grad" data-i="h1b">zamieniają ruch w klientów</span></h1>
-  <p class="lead rv" data-i="lead">Projektujemy i uruchamiamy szybkie, nowoczesne strony oraz kampanie, które zwiększają liczbę zapytań — a nie tylko ładnie wyglądają.</p>
-  <div class="cta rv">
-   <a href="#kontakt" class="btn btn-p"><span data-i="cta2">Zamów bezpłatną wycenę</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-   <a href="#realizacje" class="btn btn-g" data-i="cta3">Zobacz realizacje</a>
-  </div>
-  <div class="trust rv"><div class="avs" aria-hidden="true"><i></i><i></i><i></i></div><span><span class="stars" aria-hidden="true">★★★★★</span> <span data-i="trust">Zaufali nam właściciele firm z całej Polski</span></span></div>
-
-  <div class="mock rv" aria-hidden="true">
-   <div class="mock-in">
-    <div class="bar"><i></i><i></i><i></i></div>
-    <div class="mock-body">
-     <div class="chart">
-      <small data-i="m1">Zapytania z formularza / miesiąc</small>
-      <strong>+212%<em>↑</em></strong>
-      <svg viewBox="0 0 400 120" preserveAspectRatio="none"><defs><linearGradient id="g1" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#c6ff3d" stop-opacity=".35"/><stop offset="1" stop-color="#c6ff3d" stop-opacity="0"/></linearGradient></defs><path d="M0 105 C60 100 80 85 130 80 S210 60 250 42 S340 18 400 6 V120 H0Z" fill="url(#g1)"/><path d="M0 105 C60 100 80 85 130 80 S210 60 250 42 S340 18 400 6" fill="none" stroke="#c6ff3d" stroke-width="3" stroke-linecap="round"/></svg>
-     </div>
-     <div class="kp">
-      <div><small data-i="m2">Szybkość strony</small><b>98 / 100</b><div class="bg"><s style="width:98%"></s></div></div>
-      <div><small data-i="m3">Współczynnik konwersji</small><b>6,4%</b><div class="bg"><s style="width:64%"></s></div></div>
-     </div>
-    </div>
+ <div class="wrap hgrid">
+  <div>
+   <span class="pill rv"><i></i>Tylko Trójmiasto i Pomorze</span>
+   <h1 class="rv">Twoi klienci są online. <em class="gold">Czy Ty też?</em></h1>
+   <p class="lead rv">Jesteśmy <b>Diana i Kiril</b>. Prowadzimy social media, tworzymy angażujące Reelsy i zarządzamy skutecznymi reklamami dla lokalnych firm w Trójmieście. Pracujemy z kilkoma wybranymi partnerami naraz — bo liczy się <b>wynik i realna sprzedaż</b>, a nie ilość.</p>
+   <div class="cta rv">
+    <a href="#kontakt" class="btn btn-p">Sprawdź, czy pasujemy</a>
+    <a href="https://wa.me/48886027795?text=Dzie%C5%84%20dobry%21%20Chc%C4%99%20um%C3%B3wi%C4%87%20bezp%C5%82atn%C4%85%20konsultacj%C4%99%20i%20dowiedzie%C4%87%20si%C4%99%20wi%C4%99cej%20o%20wsp%C3%B3%C5%82pracy." class="btn btn-g" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.600-4-4.700-4.200-.1-.2-1.100-1.500-1.100-2.800s.7-2 1-2.300c.2-.3.600-.3.800-.3h.600c.2 0 .4 0 .6.500l.8 2c.1.200.1.400 0 .6l-.4.600c-.1.200-.3.300-.1.600.2.300.8 1.300 1.700 2.100 1.200 1 2.100 1.300 2.400 1.500.3.100.5.100.7-.1l.9-1.100c.2-.3.4-.2.700-.1l1.900.9c.3.100.5.200.5.300.1.200.1.800-.1 1.500z"/></svg>Napisz na WhatsApp</a>
    </div>
+   <div class="proof rv">
+    <div><b data-count="650" data-suf="M+">650M+</b><span>wyświetleń własnych profili</span></div>
+    <div><b>7 dni</b><span>do pierwszych postów</span></div>
+    <div><b>−50%</b><span>na pierwszy miesiąc</span></div>
+   </div>
+  </div>
+
+  <div class="founders rv">
+   <div class="ph" role="img" aria-label="Diana i Kiril — założyciele DIKI Agency">
+    <!-- Wstaw zdjęcie: <img src="diana-kiril.jpg" alt="Diana i Kiril"> -->
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><circle cx="16.500" cy="9" r="2.600"/><path d="M2.500 20c.4-3.600 3-5.800 6.500-5.800s6.100 2.200 6.500 5.800M15 14.600c3.200-.4 5.800 1.400 6.500 5"/></svg>
+   </div>
+   <div class="fc fc2"><b>2</b><span>wolne miejsca<br>w tym miesiącu</span></div>
+   <div class="fc"><b>650M+</b><span>wyświetleń na własnych<br>platformach w rok</span></div>
+   <div class="fn"><b>Diana &amp; Kiril</b><span>Założyciele · Trójmiasto</span></div>
   </div>
  </div>
 </section>
 
 <div class="mq" aria-hidden="true"><div class="mq-t">
- <span>Strony WWW</span><span>Sklepy online</span><span>Branding</span><span>SEO</span><span>Kampanie Meta &amp; Google</span><span>UX/UI</span><span>Automatyzacje</span>
- <span>Strony WWW</span><span>Sklepy online</span><span>Branding</span><span>SEO</span><span>Kampanie Meta &amp; Google</span><span>UX/UI</span><span>Automatyzacje</span>
+ <span>Social media</span><span>Reelsy</span><span>Meta Ads</span><span>TikTok</span><span>Sesje zdjęciowe</span><span>Google Ads</span><span>Raporty</span>
+ <span>Social media</span><span>Reelsy</span><span>Meta Ads</span><span>TikTok</span><span>Sesje zdjęciowe</span><span>Google Ads</span><span>Raporty</span>
 </div></div>
 
 <section>
  <div class="wrap">
-  <div class="stats rv">
-   <div><b data-count="120" data-suf="+">120+</b><span data-i="s1">zrealizowanych projektów</span></div>
-   <div><b data-count="3" data-suf="x">3x</b><span data-i="s2">średni wzrost zapytań</span></div>
-   <div><b data-count="14" data-suf=" dni">14 dni</b><span data-i="s3">do uruchomienia strony</span></div>
-   <div><b data-count="97" data-suf="%">97%</b><span data-i="s4">klientów wraca z kolejnym projektem</span></div>
-  </div>
-  <p class="note" data-i="stnote">Wartości przykładowe — zastąp je własnymi danymi agencji.</p>
- </div>
-</section>
-
-<section id="uslugi">
- <div class="wrap">
-  <div class="sh rv"><span class="eyebrow" data-i="e1">Usługi</span><h2 data-i="h2a">Wszystko, czego potrzebujesz, żeby rosnąć online</h2><p data-i="p2a">Jeden zespół od strategii po wynik. Bez pośredników i bez przepalania budżetu.</p></div>
-  <div class="bento">
-   <article class="card b-a rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></div><h3 data-i="sv1">Strony internetowe i landing page</h3><p data-i="sv1p">Projekt UX/UI, który prowadzi użytkownika do jednej akcji: zapytania, zakupu lub rezerwacji. Mobile-first, błyskawiczne ładowanie, gotowe pod SEO.</p><div class="tags"><span>UX/UI</span><span>Mobile-first</span><span>Core Web Vitals</span><span>CMS</span></div></article>
-   <article class="card b-b rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6h15l-2 9H8z"/><path d="M6 6 5 3H2"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/></svg></div><h3 data-i="sv2">Sklepy online</h3><p data-i="sv2p">Sklepy zaprojektowane pod wysoką konwersję koszyka.</p></article>
-   <article class="card b-c rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div><h3 data-i="sv3">SEO</h3><p data-i="sv3p">Być tam, gdzie klient szuka — na pierwszej stronie Google.</p></article>
-   <article class="card b-d rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11v2a1 1 0 0 0 1 1h3l6 4V6L7 10H4a1 1 0 0 0-1 1z"/><path d="M17 8a5 5 0 0 1 0 8"/></svg></div><h3 data-i="sv4">Kampanie płatne</h3><p data-i="sv4p">Meta i Google Ads nastawione na koszt pozyskania, nie na kliknięcia.</p></article>
-   <article class="card b-e rv"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 3 8l9 5 9-5z"/><path d="m3 13 9 5 9-5"/></svg></div><h3 data-i="sv5">Branding</h3><p data-i="sv5p">Logo i identyfikacja, które budują zaufanie od pierwszego wrażenia.</p></article>
+  <div class="sh rv"><span class="eyebrow">Właścicielu, zatrzymaj się na chwilę</span><h2>Każdy dzień bez strategii marketingowej <em class="gold">kosztuje Twój biznes.</em></h2><p>Prowadzenie firmy to pełny etat. Skuteczne zarządzanie social mediami to kolejny. Kiedy próbujesz robić oba naraz, żadne z nich nie przynosi oczekiwanego zysku.</p></div>
+  <div class="pg">
+   <article class="card rv"><div class="num">01</div><h3>Twój czas jest wart więcej niż robienie postów</h3><p>Każda godzina spędzona na grafikach czy montażu wideo to godzina mniej na domykanie sprzedaży. Właściciel robiący marketing sam płaci najdroższą stawką godzinową w firmie.</p></article>
+   <article class="card rv"><div class="num">02</div><h3>Klikanie „Promuj post” to przepalanie budżetu</h3><p>Podbijanie postów bez precyzyjnych lejków i analityki daje lajki, ale nie daje klientów. To ukryta strata, a nie oszczędność.</p></article>
+   <article class="card rv"><div class="num">03</div><h3>Konkurencja przejmuje klientów, gdy Ty czekasz</h3><p>Gdy na Twoich profilach panuje cisza, konkurencja codziennie przypomina o sobie mieszkańcom Gdańska, Sopotu i Gdyni. Dla nowych klientów po prostu nie istniejesz.</p></article>
+   <article class="card rv"><div class="num">04</div><h3>Klient sprawdza Instagram, zanim zadzwoni</h3><p>Nieaktualne treści, amatorskie zdjęcia czy brak aktywności budzą nieufność. Twój profil to współczesna witryna lokalu — decyduje o pierwszym wrażeniu.</p></article>
   </div>
  </div>
 </section>
 
-<section id="proces">
+<section id="o-nas">
+ <div class="wrap about">
+  <div class="founders rv" style="max-width:460px">
+   <div class="ph" role="img" aria-label="Diana i Kiril"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><circle cx="16.500" cy="9" r="2.600"/><path d="M2.500 20c.4-3.600 3-5.800 6.500-5.800s6.100 2.200 6.500 5.800M15 14.600c3.200-.4 5.800 1.400 6.500 5"/></svg></div>
+  </div>
+  <div class="txt rv">
+   <span class="eyebrow">Kim jesteśmy</span>
+   <h2 style="font-size:clamp(34px,4.6vw,54px);margin-bottom:24px">DIKI Agency to <em class="gold">Diana i Kiril</em></h2>
+   <p>Nie jesteśmy anonimową korporacją ani fabryką postów. Jesteśmy <b>parą przedsiębiorców z Trójmiasta</b>, która traktuje marketing jak realną inwestycję przynoszącą zwrot — a nie jako kolejne zadanie do odhaczenia w kalendarzu.</p>
+   <p>Świetnie znamy rynek Pomorza: wiemy, co przyciąga uwagę mieszkańców, jak budować zaufanie do lokalnych usług i restauracji oraz jak <b>zamieniać wyświetlenia w telefony i wizyty w lokalu</b>.</p>
+   <p>Współpracujemy tylko z kilkoma markami naraz. Sami prowadzimy platformy z ponad <b>650 milionami wyświetleń</b>. Wszystkie strategie, które wdrażamy u klientów, najpierw przetestowaliśmy na sobie.</p>
+   <blockquote>„Nie bierzemy wszystkich klientów — po to, by dać z siebie maksimum tym, z którymi decydujemy się współpracować.”</blockquote>
+  </div>
+ </div>
+</section>
+
+<section id="jak-dzialamy">
  <div class="wrap">
-  <div class="sh rv"><span class="eyebrow" data-i="e2">Proces</span><h2 data-i="h2b">Od pomysłu do wyniku w 4 krokach</h2></div>
+  <div class="sh c rv"><span class="eyebrow">Proces współpracy</span><h2>Od pierwszej rozmowy do wyników w <em class="gold">4 prostych krokach</em></h2><p>My robimy ciężką pracę — Ty poświęcasz 15 minut w miesiącu.</p></div>
   <div class="steps">
-   <div class="step rv"><h3 data-i="pr1">Rozmowa i strategia</h3><p data-i="pr1p">Poznajemy Twój biznes, klientów i cele. Dostajesz jasny plan i wycenę.</p></div>
-   <div class="step rv"><h3 data-i="pr2">Projekt</h3><p data-i="pr2p">Makiety i wizualizacja. Akceptujesz każdy ekran przed startem kodowania.</p></div>
-   <div class="step rv"><h3 data-i="pr3">Realizacja</h3><p data-i="pr3p">Budujemy, testujemy i optymalizujemy szybkość oraz SEO.</p></div>
-   <div class="step rv"><h3 data-i="pr4">Start i wzrost</h3><p data-i="pr4p">Uruchamiamy, mierzymy wyniki i stale poprawiamy konwersję.</p></div>
+   <div class="step rv"><b>01</b><h3>Rozmowa bez presji</h3><p>Poznajemy Twój biznes i cele. Oceniamy szczerze, czy jesteśmy w stanie zagwarantować realne rezultaty. Jeśli nie — powiemy to wprost.</p></div>
+   <div class="step rv"><b>02</b><h3>Sesja zdjęciowa i setup</h3><p>Przyjeżdżamy na profesjonalną sesję w Twoim lokalu. Tworzymy i konfigurujemy konta, profile, piksele Meta oraz Business Suite.</p></div>
+   <div class="step rv"><b>03</b><h3>Kreacja treści i reklamy</h3><p>Montujemy dynamiczne Reelsy, piszemy angażujące posty i uruchamiamy kampanie. Ty tylko zatwierdzasz gotowy plan.</p></div>
+   <div class="step rv"><b>04</b><h3>Wyniki i raportowanie</h3><p>Na bieżąco optymalizujemy działania i dostarczamy czytelne raporty. Cel jest jeden: rosnąca liczba zapytań i klientów.</p></div>
   </div>
+  <div class="zero rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.600 5.600 6 .8-4.400 4.200 1.100 6L12 16.700 6.700 19.600l1.100-6L3.400 9.400l6-.8z"/></svg><p><b>Zaczynasz od zupełnego zera? Żaden problem.</b> Zakładamy i weryfikujemy profile na wszystkich platformach, konfigurujemy Meta Business Manager, instalujemy Piksel Facebooka i przygotowujemy spójną oprawę graficzną. Wszystkie dostępy i prawa własności zawsze pozostają w 100% Twoje.</p></div>
  </div>
 </section>
 
-<section id="realizacje">
+<section id="oferta">
  <div class="wrap">
-  <div class="sh rv"><span class="eyebrow" data-i="e3">Realizacje</span><h2 data-i="h2c">Projekty, które pracują na wynik</h2></div>
-  <div class="cases">
-   <article class="case rv"><div class="thumb t1"><svg viewBox="0 0 200 120" fill="none"><rect x="10" y="10" width="180" height="100" rx="10" fill="#fff" fill-opacity=".12" stroke="#fff" stroke-opacity=".4"/><rect x="24" y="26" width="90" height="10" rx="5" fill="#fff"/><rect x="24" y="44" width="60" height="6" rx="3" fill="#fff" fill-opacity=".6"/><rect x="24" y="72" width="44" height="16" rx="8" fill="#c6ff3d"/></svg></div><div class="case-b"><small>Branża usługowa</small><h3 data-i="c1">Strona dla firmy remontowej</h3><div class="res"><div><b>+212%</b><span data-i="cr1">zapytań</span></div><div><b>1,1 s</b><span data-i="cr2">czas ładowania</span></div></div></div></article>
-   <article class="case rv"><div class="thumb t2"><svg viewBox="0 0 200 120" fill="none"><rect x="10" y="10" width="180" height="100" rx="10" fill="#fff" fill-opacity=".12" stroke="#fff" stroke-opacity=".4"/><rect x="24" y="24" width="38" height="38" rx="8" fill="#fff" fill-opacity=".7"/><rect x="70" y="24" width="38" height="38" rx="8" fill="#fff" fill-opacity=".45"/><rect x="116" y="24" width="38" height="38" rx="8" fill="#fff" fill-opacity=".3"/><rect x="24" y="76" width="60" height="16" rx="8" fill="#c6ff3d"/></svg></div><div class="case-b"><small>E-commerce</small><h3 data-i="c2">Sklep z modą premium</h3><div class="res"><div><b>+87%</b><span data-i="cr3">sprzedaży</span></div><div><b>3,2x</b><span>ROAS</span></div></div></div></article>
-   <article class="case rv"><div class="thumb t3"><svg viewBox="0 0 200 120" fill="none"><rect x="10" y="10" width="180" height="100" rx="10" fill="#07080d" fill-opacity=".35" stroke="#fff" stroke-opacity=".4"/><path d="M26 90 C56 86 70 62 100 58 S150 36 174 26" stroke="#fff" stroke-width="4" stroke-linecap="round"/><circle cx="174" cy="26" r="6" fill="#fff"/></svg></div><div class="case-b"><small>SaaS / B2B</small><h3 data-i="c3">Landing page dla platformy B2B</h3><div class="res"><div><b>6,4%</b><span data-i="cr4">konwersja</span></div><div><b>-41%</b><span data-i="cr5">koszt leada</span></div></div></div></article>
-  </div>
-  <p class="note" data-i="cnote">Przykładowe realizacje — podmień na prawdziwe case studies.</p>
- </div>
-</section>
+  <div class="sh c rv"><span class="eyebrow">Pakiety i cennik</span><h2>Przejrzyste pakiety dopasowane do <em class="gold">skali Twojej firmy</em></h2></div>
 
-<section id="cennik">
- <div class="wrap">
-  <div class="sh c rv"><span class="eyebrow" data-i="e4">Cennik</span><h2 data-i="h2d">Przejrzyste pakiety, bez ukrytych kosztów</h2><p data-i="p2d">Stała cena, jasny zakres i termin. Dobierzemy rozwiązanie do Twojego etapu rozwoju.</p></div>
+  <div class="promo rv">
+   <div><span class="big gold">−50%</span><div><h3>Pierwszy miesiąc w połowie ceny</h3><p>Przekonaj się do jakości naszych materiałów bez zbędnego ryzyka. Elastyczna umowa z 1-miesięcznym okresem wypowiedzenia.</p></div></div>
+   <a href="#kontakt" class="btn btn-p">Odbierz rabat −50%</a>
+  </div>
+
   <div class="plans">
-   <div class="plan rv"><h3>Start</h3><p data-i="pl1">Dla firm, które wchodzą do internetu.</p><div class="pr">od 2 900 zł</div><small style="color:var(--muted)" data-i="once">jednorazowo</small>
-    <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><span data-i="f1">Landing page do 5 sekcji</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><span data-i="f2">Wersja mobilna</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><span data-i="f3">Formularz kontaktowy</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><span data-i="f4">Podstawowe SEO</span></li></ul>
-    <a href="#kontakt" class="btn btn-g" data-i="pick">Wybieram</a></div>
-   <div class="plan hot rv"><span class="badge" data-i="pop">Najczęściej wybierany</span><h3>Growth</h3><p data-i="pl2">Dla firm nastawionych na stały wzrost.</p><div class="pr">od 6 900 zł</div><small style="color:var(--muted)" data-i="once">jednorazowo</small>
-    <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><span data-i="f5">Strona wielopodstronowa + CMS</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><span data-i="f6">Indywidualny projekt UX/UI</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><span data-i="f7">Analityka i śledzenie konwersji</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><span data-i="f8">SEO techniczne + 3 mies. opieki</span></li></ul>
-    <a href="#kontakt" class="btn btn-p" data-i="pick">Wybieram</a></div>
-   <div class="plan rv"><h3>Scale</h3><p data-i="pl3">Dla sklepów i rozbudowanych projektów.</p><div class="pr" data-i="cust">Indywidualnie</div><small style="color:var(--muted)" data-i="quote">po bezpłatnej wycenie</small>
-    <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><span data-i="f9">Sklep online lub aplikacja</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><span data-i="f10">Kampanie Meta i Google Ads</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><span data-i="f11">Automatyzacje i integracje</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><span data-i="f12">Dedykowany opiekun</span></li></ul>
-    <a href="#kontakt" class="btn btn-g" data-i="talk">Porozmawiajmy</a></div>
+   <article class="plan rv">
+    <h3>Start</h3>
+    <div class="chips"><span>Instagram</span><span>Facebook</span></div>
+    <div class="price">835 <small>PLN w 1. miesiącu</small></div>
+    <p class="old"><s>1 670 PLN</s> · potem 1 670 PLN netto / mc</p>
+    <div class="cnt"><div><b>8</b><span>Reels</span></div><div><b>10</b><span>Postów</span></div><div><b>15</b><span>Relacji</span></div></div>
+    <ul>
+     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.500" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Profesjonalna sesja zdjęciowa w lokalu na start</li>
+     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.500" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Założenie lub optymalizacja kont (IG + FB)</li>
+     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.500" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Spójny projekt graficzny profili i okładek</li>
+     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.500" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Strategia treści i harmonogram publikacji</li>
+     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.500" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Regularne publikowanie i moderacja komentarzy</li>
+     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.500" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Comiesięczny raport i dedykowany opiekun</li>
+    </ul>
+    <a href="#kontakt" class="btn btn-g" data-pkg="Pakiet Start — 835 PLN na start (-50%), potem 1 670 PLN / mc">Wybierz Pakiet Start</a>
+   </article>
+
+   <article class="plan hot rv">
+    <span class="badge">Najpopularniejszy wybór</span>
+    <h3>Wzrost</h3>
+    <div class="chips"><span>Instagram</span><span>Facebook</span><span>TikTok</span></div>
+    <div class="price">1 740 <small>PLN w 1. miesiącu</small></div>
+    <p class="old"><s>3 480 PLN</s> · potem 3 480 PLN netto / mc</p>
+    <div class="cnt"><div><b>16</b><span>Reels</span></div><div><b>14</b><span>Postów</span></div><div><b>22</b><span>Relacje</span></div></div>
+    <ul>
+     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.500" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><b>Wszystko z pakietu Start, plus:</b></li>
+     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.500" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Pełne prowadzenie profilu TikTok od podstaw</li>
+     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.500" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Płatne kampanie Meta Ads (Facebook + IG)</li>
+     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.500" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Zaawansowane targetowanie klientów w Trójmieście</li>
+     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.500" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Rozbudowana strategia wiralowego wideo</li>
+     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.500" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Cotygodniowy monitoring konwersji i zapytań</li>
+     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.500" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Priorytetowy kontakt telefoniczny i WhatsApp</li>
+    </ul>
+    <a href="#kontakt" class="btn btn-p" data-pkg="Pakiet Wzrost (Polecany) — 1 740 PLN na start (-50%), potem 3 480 PLN / mc">Wybierz Pakiet Wzrost</a>
+   </article>
+
+   <article class="plan rv">
+    <h3>Dominacja</h3>
+    <div class="chips"><span>Instagram</span><span>Facebook</span><span>TikTok</span><span>YouTube</span></div>
+    <div class="price">2 995 <small>PLN w 1. miesiącu</small></div>
+    <p class="old"><s>5 990 PLN</s> · potem 5 990 PLN netto / mc</p>
+    <div class="cnt"><div><b>24</b><span>Reels</span></div><div><b>18</b><span>Postów</span></div><div><b>28</b><span>Relacji</span></div></div>
+    <ul>
+     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.500" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><b>Maksymalna widoczność na rynku:</b></li>
+     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.500" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>4 kanały: Instagram, Facebook, TikTok, YouTube</li>
+     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.500" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Kampanie Meta Ads oraz Google Ads</li>
+     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.500" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Zaawansowany lejek sprzedażowy i remarketing</li>
+     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.500" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Dwie sesje zdjęciowo-wideo każdego miesiąca</li>
+     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.500" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Cotygodniowe raporty + omówienie video</li>
+     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.500" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>Wsparcie 7 dni w tygodniu (status VIP)</li>
+    </ul>
+    <a href="#kontakt" class="btn btn-g" data-pkg="Pakiet Dominacja — 2 995 PLN na start (-50%), potem 5 990 PLN / mc">Wybierz Dominację</a>
+   </article>
+  </div>
+
+  <div class="pn rv">
+   <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h13l-3-3M17 17H4l3 3"/></svg><p><b>Indywidualne dopasowanie.</b> Pakiety są punktem wyjścia. Potrzebujesz więcej rolek lub wsparcia w TikToku? Zakres dopasujemy do Twojego budżetu.</p></div>
+   <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.800" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v.01M11 12h1v4h1"/></svg><p><b>Budżet reklamowy</b> (Meta Ads, Google Ads) ustalamy indywidualnie i rozliczasz go bezpośrednio z platformami. Ceny pakietów obejmują naszą obsługę.</p></div>
   </div>
  </div>
 </section>
 
 <section>
  <div class="wrap">
-  <div class="sh rv"><span class="eyebrow" data-i="e5">Opinie</span><h2 data-i="h2e">Klienci mówią o wynikach</h2></div>
-  <div class="tg">
-   <figure class="t rv"><span class="stars" aria-label="5/5">★★★★★</span><p data-i="t1">„Po premierze nowej strony zapytań mamy kilka razy więcej. Kontakt bezproblemowy, terminy dotrzymane.”</p><figcaption class="who"><i></i><div><b>Anna K.</b><span data-i="r1">Właścicielka firmy usługowej</span></div></figcaption></figure>
-   <figure class="t rv"><span class="stars" aria-label="5/5">★★★★★</span><p data-i="t2">„Wreszcie agencja, która mówi o liczbach, a nie o ładnych kolorach. Sklep sprzedaje wyraźnie lepiej.”</p><figcaption class="who"><i></i><div><b>Marek W.</b><span data-i="r2">Właściciel sklepu online</span></div></figcaption></figure>
-   <figure class="t rv"><span class="stars" aria-label="5/5">★★★★★</span><p data-i="t3">„Szybko, konkretnie i profesjonalnie. Strona działa błyskawicznie, a kampanie przynoszą tańsze leady.”</p><figcaption class="who"><i></i><div><b>Piotr S.</b><span data-i="r3">Dyrektor marketingu</span></div></figcaption></figure>
+  <div class="sh rv"><span class="eyebrow">Dlaczego DIKI Agency</span><h2>Nie jesteśmy kolejną agencją. <em class="gold">Jesteśmy Twoim lokalnym partnerem.</em></h2></div>
+  <div class="wg">
+   <article class="card rv"><small>Tylko Pomorze</small><h3>Znamy lokalny rynek</h3><p>Działamy na miejscu w Gdańsku, Gdyni i Sopocie. Wiemy, czym żyją mieszkańcy i jakie formaty przyciągają klientów z Twojej okolicy.</p></article>
+   <article class="card rv"><small>Jakość, nie ilość</small><h3>Mało klientów — celowo</h3><p>Każdy klient otrzymuje naszą pełną uwagę. Nie delegujemy Twojego konta przypadkowym stażystom.</p></article>
+   <article class="card rv"><small>Długofalowa relacja</small><h3>Partnerstwo w biznesie</h3><p>Zależy nam na trwałym wzroście Twoich przychodów. Twój sukces jest najlepszą wizytówką naszej agencji.</p></article>
+   <article class="card rv"><small>Praktyczne doświadczenie</small><h3>Sprawdzamy na sobie</h3><p>Zbudowaliśmy profile z ponad 650 milionami wyświetleń. Nie uczymy się marketingu na Twoim budżecie.</p></article>
+   <article class="card rv"><small>Oszczędność czasu</small><h3>Ty zatwierdzasz, my działamy</h3><p>Wystarczy 15 minut w miesiącu. My bierzemy na siebie kreację, opisy, publikowanie i analitykę.</p></article>
+   <article class="card rv"><small>Zero ryzyka</small><h3>Umowa na miesiąc</h3><p>Brak wielomiesięcznych zobowiązań. Startujesz z rabatem 50% i miesięcznym okresem wypowiedzenia.</p></article>
   </div>
-  <p class="note" data-i="tnote">Opinie przykładowe — zastąp prawdziwymi.</p>
  </div>
 </section>
 
 <section id="faq">
  <div class="wrap">
-  <div class="sh c rv"><span class="eyebrow">FAQ</span><h2 data-i="h2f">Najczęstsze pytania</h2></div>
+  <div class="sh c rv"><span class="eyebrow">Częste pytania</span><h2>Odpowiedzi na to, <em class="gold">co najważniejsze</em></h2></div>
   <div class="faq">
-   <details class="rv"><summary><span data-i="q1">Ile trwa stworzenie strony?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></summary><p data-i="a1">Landing page uruchamiamy zwykle w 7–14 dni, rozbudowaną stronę lub sklep w 4–8 tygodni.</p></details>
-   <details class="rv"><summary><span data-i="q2">Czy wycena jest naprawdę bezpłatna?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></summary><p data-i="a2">Tak. Po krótkiej rozmowie otrzymasz wycenę z zakresem i terminem, bez zobowiązań.</p></details>
-   <details class="rv"><summary><span data-i="q3">Czy mogę sam edytować treści?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></summary><p data-i="a3">Oczywiście. Wdrażamy prosty panel CMS i szkolimy Twój zespół.</p></details>
-   <details class="rv"><summary><span data-i="q4">Co po uruchomieniu strony?</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></summary><p data-i="a4">Zapewniamy opiekę techniczną, monitoring wyników oraz dalszą optymalizację konwersji i SEO.</p></details>
+   <details class="rv"><summary>Czy muszę mieć już założone profile w social mediach?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></summary><p>Nie, zupełnie nie musisz. Jeśli zaczynasz od zera, zakładamy i konfigurujemy konta, tworzymy profesjonalne biogramy, instalujemy Piksel Facebooka i konfigurujemy narzędzia reklamowe. Wszystkie dostępy i prawa własności zawsze należą do Ciebie.</p></details>
+   <details class="rv"><summary>Ile mojego czasu będzie wymagać współpraca w miesiącu?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></summary><p>Średnio około 15 minut. My zajmujemy się scenariuszami, montażem, grafikami, publikowaniem i moderacją. Ty jedynie zatwierdzasz gotowy harmonogram lub przekazujesz bieżące uwagi.</p></details>
+   <details class="rv"><summary>Dlaczego pracujecie z ograniczoną liczbą klientów naraz?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></summary><p>Świadomie nie jesteśmy agencją taśmową obsługującą setki firm. Aby zapewnić najwyższą jakość i stały osobisty kontakt z Dianą i Kirilem, prowadzimy tylko ograniczoną liczbę klientów. Gdy miejsca są zajęte, tworzymy listę oczekujących.</p></details>
+   <details class="rv"><summary>Ile wynosi rekomendowany budżet reklamowy?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></summary><p>Ustalamy go indywidualnie w zależności od branży i celów. Dla lokalnych biznesów w Trójmieście rekomendujemy start od 500 do 1 500 PLN miesięcznie na kampanie Meta Ads. Budżet wpłacasz bezpośrednio do Facebooka lub Google.</p></details>
+   <details class="rv"><summary>Kiedy zobaczę pierwsze publikacje i realne efekty?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></summary><p>Pierwsze materiały publikujemy zazwyczaj w ciągu 7 dni od podpisania umowy i sesji zdjęciowej. Wzrost zaangażowania i widoczności organicznej jest widoczny w 4–6 tygodni, a pierwsze zapytania z reklam często pojawiają się już w pierwszym tygodniu emisji.</p></details>
+   <details class="rv"><summary>Na jak długo podpisywana jest umowa? Czy muszę wiązać się na rok?<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.200" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></summary><p>Nie. Działamy na zasadzie elastycznych umów miesięcznych z jednomiesięcznym okresem wypowiedzenia. Nasi klienci zostają, bo widzą realne wyniki, a nie dlatego, że zmusza ich do tego kontrakt.</p></details>
   </div>
  </div>
 </section>
 
-<section id="kontakt" style="padding-top:40px">
+<section id="kontakt" style="padding-top:30px">
  <div class="wrap">
   <div class="final rv">
    <div>
-    <h2 data-i="fh">Zacznijmy rozmowę o Twoim wzroście</h2>
-    <p class="lp" data-i="fp">Zostaw dane — odezwiemy się w ciągu 24 godzin z konkretnym planem i wyceną.</p>
-    <ul class="perks">
-     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><span data-i="k1">Bezpłatna konsultacja i wycena</span></li>
-     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><span data-i="k2">Odpowiedź w 24 godziny</span></li>
-     <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg><span data-i="k3">Bez zobowiązań</span></li>
-    </ul>
+    <div class="left"><i></i>Aktualnie wolne miejsca: 2</div>
+    <h2>Sprawdźmy bez presji, <em class="gold">czy do siebie pasujemy</em></h2>
+    <p class="lp">Zostaw swój numer lub napisz do nas bezpośrednio na WhatsApp. Porozmawiamy szczerze o Twoim biznesie, wyzwaniach i o tym, jak możemy pomóc Ci pozyskać więcej klientów.</p>
+    <a href="https://wa.me/48886027795?text=Dzie%C5%84%20dobry%21%20Jestem%20zainteresowany%20ofert%C4%85%20DIKI%20Agency%20i%20chcia%C5%82bym%20porozmawia%C4%87." class="btn btn-p" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.2-4.600-4-4.700-4.200-.1-.2-1.100-1.500-1.100-2.800s.7-2 1-2.300c.2-.3.600-.3.800-.3h.600c.2 0 .4 0 .6.500l.8 2c.1.200.1.400 0 .6l-.4.600c-.1.200-.3.300-.1.600.2.300.8 1.300 1.700 2.100 1.200 1 2.100 1.300 2.400 1.500.3.100.5.100.7-.1l.9-1.100c.2-.3.400-.2.700-.1l1.900.9c.3.100.5.200.5.300.1.200.1.800-.1 1.500z"/></svg>Napisz na WhatsApp</a>
    </div>
    <form id="lead" novalidate>
-    <label><span data-i="l1">Imię</span><input name="name" required autocomplete="name" placeholder="Jan Kowalski"></label>
-    <label><span data-i="l2">E-mail</span><input name="email" type="email" required autocomplete="email" placeholder="jan@firma.pl"></label>
-    <label><span data-i="l3">Czego potrzebujesz?</span><select name="need"><option>Strona internetowa</option><option>Sklep online</option><option>Kampanie / SEO</option><option>Branding</option></select></label>
-    <label><span data-i="l4">Wiadomość</span><textarea name="msg" placeholder="..."></textarea></label>
-    <button class="btn btn-p" type="submit"><span data-i="send">Wyślij zapytanie</span></button>
-    <div class="ok" id="ok" role="status" data-i="okmsg">Dziękujemy! Odezwiemy się wkrótce.</div>
-    <p class="fine" data-i="fine">Twoje dane są bezpieczne. Nie wysyłamy spamu.</p>
+    <label for="n">Imię i nazwisko / Nazwa firmy<input id="n" name="name" required autocomplete="organization" placeholder="np. Kawiarnia Morze"></label>
+    <label for="p">Numer telefonu<input id="p" name="phone" type="tel" required autocomplete="tel" inputmode="tel" placeholder="+48 600 000 000" pattern="[+0-9 ()\-]{9,}"></label>
+    <label for="k">Interesujący Cię pakiet
+     <select id="k" name="pkg">
+      <option>Nie wiem jeszcze — chcę darmową konsultację</option>
+      <option>Pakiet Start — 835 PLN na start (-50%), potem 1 670 PLN / mc</option>
+      <option>Pakiet Wzrost (Polecany) — 1 740 PLN na start (-50%), potem 3 480 PLN / mc</option>
+      <option>Pakiet Dominacja — 2 995 PLN na start (-50%), potem 5 990 PLN / mc</option>
+     </select></label>
+    <button class="btn btn-p" type="submit">Wyślij zgłoszenie — odpiszemy na WhatsApp</button>
+    <p class="fine">Zero spamu. Twoje dane służą wyłącznie do kontaktu w sprawie oferty.</p>
+    <p class="alt"><span>lub napisz:</span><a href="mailto:dikiagency11@gmail.com">dikiagency11@gmail.com</a></p>
    </form>
   </div>
  </div>
@@ -400,65 +420,32 @@ footer{border-top:1px solid var(--line);padding:46px 0;color:var(--muted);font-s
 
 <footer>
  <div class="wrap fw">
-  <a href="#top" class="logo"><b>D</b>DIKI<span>AGENCY</span></a>
-  <nav><a href="#uslugi" data-i="n1">Usługi</a><a href="#realizacje" data-i="n3">Realizacje</a><a href="#cennik" data-i="n4">Cennik</a><a href="#kontakt" data-i="n6">Kontakt</a></nav>
-  <span>© 2026 DIKI AGENCY</span>
+  <a href="#top" class="logo"><span>DIKI</span><i>.</i><span>AGENCY</span></a>
+  <nav><a href="mailto:dikiagency11@gmail.com">dikiagency11@gmail.com</a><a href="https://wa.me/48886027795" target="_blank" rel="noopener">WhatsApp</a><a href="#oferta">Oferta</a></nav>
+  <span>© 2026 DIKI Agency · Trójmiasto i Pomorze</span>
  </div>
 </footer>
-<div class="mcta"><a href="#kontakt" class="btn btn-p" data-i="cta1">Bezpłatna wycena</a></div>
+<div class="mcta"><a href="#kontakt" class="btn btn-p">Sprawdź, czy pasujemy</a></div>
 
 <script>
-const D={
- ru:{n1:"Услуги",n2:"Процесс",n3:"Кейсы",n4:"Цены",n5:"FAQ",n6:"Контакты",cta1:"Бесплатная оценка",cta2:"Заказать бесплатную оценку",cta3:"Смотреть кейсы",
- pill:"Берём 3 новых проекта в этом месяце",h1a:"Сайты, которые",h1b:"превращают трафик в клиентов",
- lead:"Проектируем и запускаем быстрые современные сайты и кампании, которые увеличивают число заявок, а не просто красиво выглядят.",
- trust:"Нам доверяют владельцы бизнеса по всей Польше",m1:"Заявок с формы / месяц",m2:"Скорость сайта",m3:"Конверсия",
- s1:"реализованных проектов",s2:"средний рост заявок",s3:"до запуска сайта",s4:"клиентов возвращаются с новым проектом",stnote:"Примерные значения — замените данными агентства.",
- e1:"Услуги",h2a:"Всё, что нужно для роста в интернете",p2a:"Одна команда от стратегии до результата. Без посредников и слитого бюджета.",
- sv1:"Сайты и лендинги",sv1p:"UX/UI, который ведёт пользователя к одному действию: заявке, покупке или записи. Mobile-first, мгновенная загрузка, готовность к SEO.",
- sv2:"Интернет-магазины",sv2p:"Магазины, спроектированные под высокую конверсию корзины.",sv3:"SEO",sv3p:"Быть там, где ищет клиент — на первой странице Google.",
- sv4:"Платная реклама",sv4p:"Meta и Google Ads с фокусом на стоимость клиента, а не на клики.",sv5:"Брендинг",sv5p:"Логотип и айдентика, формирующие доверие с первого взгляда.",
- e2:"Процесс",h2b:"От идеи до результата за 4 шага",pr1:"Разговор и стратегия",pr1p:"Изучаем бизнес, клиентов и цели. Вы получаете чёткий план и смету.",
- pr2:"Дизайн",pr2p:"Макеты и визуализация. Вы утверждаете каждый экран до начала разработки.",pr3:"Разработка",pr3p:"Собираем, тестируем, оптимизируем скорость и SEO.",pr4:"Запуск и рост",pr4p:"Запускаем, измеряем результат и постоянно повышаем конверсию.",
- e3:"Кейсы",h2c:"Проекты, которые работают на результат",c1:"Сайт для ремонтной компании",c2:"Магазин премиальной одежды",c3:"Лендинг для B2B-платформы",cr1:"заявок",cr2:"время загрузки",cr3:"продаж",cr4:"конверсия",cr5:"стоимость лида",cnote:"Примеры — замените реальными кейсами.",
- e4:"Цены",h2d:"Прозрачные пакеты без скрытых платежей",p2d:"Фиксированная цена, понятный объём и срок. Подберём решение под ваш этап.",
- pl1:"Для тех, кто выходит в интернет.",pl2:"Для бизнеса, нацеленного на стабильный рост.",pl3:"Для магазинов и крупных проектов.",once:"разово",pop:"Самый популярный",cust:"Индивидуально",quote:"после бесплатной оценки",pick:"Выбираю",talk:"Обсудим",
- f1:"Лендинг до 5 секций",f2:"Мобильная версия",f3:"Форма обратной связи",f4:"Базовое SEO",f5:"Многостраничный сайт + CMS",f6:"Индивидуальный UX/UI",f7:"Аналитика и отслеживание конверсий",f8:"Техническое SEO + 3 мес. поддержки",f9:"Интернет-магазин или приложение",f10:"Кампании Meta и Google Ads",f11:"Автоматизации и интеграции",f12:"Персональный менеджер",
- e5:"Отзывы",h2e:"Клиенты говорят о результатах",t1:"«После запуска нового сайта заявок стало в разы больше. Общение без проблем, сроки соблюдены.»",t2:"«Наконец агентство, которое говорит о цифрах, а не о красивых цветах. Магазин продаёт заметно лучше.»",t3:"«Быстро, чётко и профессионально. Сайт летает, а кампании приносят более дешёвые лиды.»",r1:"Владелица сервисной компании",r2:"Владелец интернет-магазина",r3:"Директор по маркетингу",tnote:"Отзывы примерные — замените настоящими.",
- h2f:"Частые вопросы",q1:"Сколько занимает создание сайта?",a1:"Лендинг запускаем обычно за 7–14 дней, сложный сайт или магазин — за 4–8 недель.",q2:"Оценка действительно бесплатная?",a2:"Да. После короткого разговора вы получите оценку с объёмом и сроками, без обязательств.",q3:"Смогу ли я сам редактировать контент?",a3:"Конечно. Подключаем простую CMS и обучаем вашу команду.",q4:"Что после запуска?",a4:"Обеспечиваем техподдержку, мониторинг результатов и дальнейшую оптимизацию конверсии и SEO.",
- fh:"Начнём разговор о вашем росте",fp:"Оставьте данные — свяжемся в течение 24 часов с конкретным планом и оценкой.",k1:"Бесплатная консультация и оценка",k2:"Ответ в течение 24 часов",k3:"Без обязательств",
- l1:"Имя",l2:"E-mail",l3:"Что вам нужно?",l4:"Сообщение",send:"Отправить заявку",okmsg:"Спасибо! Скоро свяжемся с вами.",fine:"Ваши данные в безопасности. Никакого спама."}
-};
-const pl={};document.querySelectorAll("[data-i]").forEach(e=>{pl[e.dataset.i]??=e.textContent});
-function setLang(l){
- document.documentElement.lang=l;
- document.querySelectorAll("[data-i]").forEach(e=>{const k=e.dataset.i;const v=l==="ru"?D.ru[k]:pl[k];if(v!=null)e.textContent=v});
- document.querySelectorAll(".lang button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.l===l));
- try{localStorage.setItem("lang",l)}catch(e){}
-}
-document.querySelectorAll(".lang button").forEach(b=>b.addEventListener("click",()=>setLang(b.dataset.l)));
-try{const s=localStorage.getItem("lang");if(s==="ru")setLang("ru")}catch(e){}
-
 // reveal
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12});
-document.querySelectorAll(".rv,.step").forEach((e,i)=>{e.style.transitionDelay=(i%4)*70+"ms";io.observe(e)});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll(".rv").forEach((e,i)=>{e.style.transitionDelay=(i%3)*70+"ms";io.observe(e)});
 
-// counters
-const co=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;co.unobserve(e.target);
- const el=e.target,n=+el.dataset.count,suf=el.dataset.suf||"",t0=performance.now();
- if(matchMedia("(prefers-reduced-motion:reduce)").matches)return;
- (function f(t){const p=Math.min((t-t0)/1400,1);el.textContent=Math.round(n*(1-Math.pow(1-p,3)))+suf;if(p<1)requestAnimationFrame(f)})(t0)}),{threshold:.6});
-document.querySelectorAll("[data-count]").forEach(e=>co.observe(e));
+// package buttons preselect the form option
+document.querySelectorAll("[data-pkg]").forEach(b=>b.addEventListener("click",()=>{
+  const s=document.getElementById("k");[...s.options].forEach((o,i)=>{if(o.text===b.dataset.pkg)s.selectedIndex=i});
+}));
 
 // card spotlight
 document.querySelectorAll(".card").forEach(c=>c.addEventListener("pointermove",e=>{const r=c.getBoundingClientRect();c.style.setProperty("--mx",e.clientX-r.left+"px");c.style.setProperty("--my",e.clientY-r.top+"px")}));
 
-// form (demo: wire to your backend / Formspree / email service)
+// form -> opens WhatsApp with prefilled lead (same flow as the current site)
 document.getElementById("lead").addEventListener("submit",e=>{
- e.preventDefault();const f=e.target;
- if(!f.checkValidity()){f.reportValidity();return}
- const b=f.querySelector("button");b.disabled=true;
- setTimeout(()=>{document.getElementById("ok").classList.add("show");f.reset();b.disabled=false},600);
+  e.preventDefault();const f=e.target;
+  if(!f.checkValidity()){f.reportValidity();return}
+  const t="Dzień dobry Diana i Kiril! Zgłaszam się ze strony DIKI Agency: "+f.name.value+", pakiet: "+f.pkg.value+", tel: "+f.phone.value;
+  window.open("https://wa.me/48886027795?text="+encodeURIComponent(t),"_blank","noopener");
 });
 </script>
 </body>
